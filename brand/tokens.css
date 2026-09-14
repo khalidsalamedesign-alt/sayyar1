@@ -1,0 +1,20 @@
+/* هوية سيّار — متغيرات الألوان والخطوط (مصدرها: شعار سيّار.dc.html) */
+:root {
+  /* الألوان الأساسية */
+  --sy-navy: #17213D;        /* الرمز والنصوص الأساسية */
+  --sy-gray: #F2F3F5;        /* الخلفيات والفواصل */
+  --sy-amber: #E8923C;       /* الأسعار وأزرار التواصل فقط */
+  --sy-amber-text: #B8651A;  /* نسخة أغمق للنص الصغير (تباين 4.5:1 على الفاتح) */
+
+  /* المحايدات */
+  --sy-ink: #14161B;
+  --sy-text-2: #565B65;
+  --sy-muted: #6E737C;       /* أغمق قليلاً من #8A8F98 ليحقق التباين */
+  --sy-border: #E4E1DA;
+  --sy-bg: #FBFAF8;
+
+  /* الخطوط */
+  --sy-font-logo: "Noto Kufi Arabic", "IBM Plex Sans Arabic", system-ui, sans-serif;
+  --sy-font-latin: "Manrope", "Segoe UI", system-ui, sans-serif;
+  --sy-font-ui: "IBM Plex Sans Arabic", "Segoe UI", Tahoma, system-ui, sans-serif;
+}

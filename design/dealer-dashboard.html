@@ -1,0 +1,230 @@
+<!doctype html>
+<html lang="ar" dir="rtl" data-cur="usd">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>لوحة المعرض — سيّار</title>
+<meta name="theme-color" content="#17213D">
+<meta name="robots" content="noindex">
+<link rel="icon" href="../brand/sayyar-app-icon.svg" type="image/svg+xml">
+<script>try{var c=localStorage.getItem('sy-cur');if(c)document.documentElement.setAttribute('data-cur',c)}catch(e){}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600&family=Manrope:wght@600;800&family=Noto+Kufi+Arabic:wght@700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css?v=20260915c">
+</head>
+<body data-default-state="active">
+<a class="skip" href="#main">تخطَّ إلى المحتوى</a>
+
+<header class="site-header">
+  <div class="container hdr">
+    <a href="index.html?v=20260915c" class="logo" aria-label="سيّار — الرئيسية">
+      <span class="logo-word" aria-hidden="true">سيّار</span>
+      <svg class="logo-mark" aria-hidden="true"><use href="icons.svg#mark"/></svg>
+    </a>
+    <nav class="hdr-nav" aria-label="القائمة الرئيسية">
+      <a href="search.html?v=20260915c">تصفح الآليات</a>
+      <a href="dealers.html?v=20260915c">المعارض</a>
+    </nav>
+    <div class="hdr-actions">
+      <div class="cur" role="group" aria-label="عملة عرض الأسعار">
+        <button type="button" data-cur="usd" aria-pressed="true">$</button>
+        <button type="button" data-cur="syp" aria-pressed="false">ل.س</button>
+      </div>
+      <a class="btn btn-primary hide-sm" href="post.html?v=20260915c"><svg class="i"><use href="icons.svg#plus"/></svg>أضف إعلان</a>
+    </div>
+  </div>
+</header>
+
+<main id="main" class="container shell">
+  <aside class="side">
+    <div class="side-user"><span class="avatar">ن</span><div><b>معرض النور للسيارات</b><small>بريميوم · موثّق</small></div></div>
+    <div class="side-nav" role="tablist" aria-label="أقسام لوحة المعرض" aria-orientation="vertical" data-tabs data-hash>
+      <button type="button" role="tab" id="t-ov" aria-controls="overview" aria-selected="true"><svg class="i"><use href="icons.svg#grid"/></svg>نظرة عامة</button>
+      <button type="button" role="tab" id="t-ls" aria-controls="listings" aria-selected="false"><svg class="i"><use href="icons.svg#list"/></svg>الإعلانات <span class="n num" style="background:var(--gray);color:var(--text-2)">38</span></button>
+      <button type="button" role="tab" id="t-sub" aria-controls="subscription" aria-selected="false"><svg class="i"><use href="icons.svg#wallet"/></svg>الاشتراك</button>
+    </div>
+    <span class="side-sep"></span>
+    <nav class="side-nav hide-sm" aria-label="روابط المعرض">
+      <a class="side-link" href="dealer.html?v=20260915c"><svg class="i"><use href="icons.svg#store"/></svg>عرض صفحة المعرض</a>
+      <a class="side-link" href="index.html?v=20260915c"><svg class="i"><use href="icons.svg#logout"/></svg>تسجيل الخروج</a>
+    </nav>
+  </aside>
+
+  <div>
+    <!-- نظرة عامة -->
+    <section id="overview" role="tabpanel" aria-labelledby="t-ov" class="stack">
+      <div class="pane-head" style="margin-bottom:0">
+        <div><h1>أهلاً، معرض النور</h1><p class="sub">ملخص آخر 30 يوماً</p></div>
+        <a class="btn btn-primary" href="post.html?v=20260915c"><svg class="i"><use href="icons.svg#plus"/></svg>أضف إعلان</a>
+      </div>
+
+      <div class="alert alert-warn" data-state="active">
+        <svg class="i"><use href="icons.svg#alert"/></svg>
+        <span><b>اشتراكك ينتهي بعد 4 أيام</b> (18 أيلول). جدّد الآن لتبقى إعلاناتك ظاهرة.</span>
+        <a class="btn btn-primary" href="plans.html?v=20260915c#pay">جدّد الاشتراك</a>
+      </div>
+      <div class="alert alert-danger" data-state="expired">
+        <svg class="i"><use href="icons.svg#eye-off"/></svg>
+        <span><b>انتهى اشتراكك في 12 أيلول.</b> إعلاناتك الـ<span class="num">38</span> مخفية عن المشترين ولم تُحذف، وستعود فور التجديد.</span>
+        <a class="btn btn-primary" href="plans.html?v=20260915c#pay">جدّد الآن</a>
+      </div>
+
+      <div class="stats">
+        <div class="stat"><small><svg class="i"><use href="icons.svg#eye"/></svg>المشاهدات</small><b>12,480</b><p class="delta">↑ 18% عن الشهر السابق</p></div>
+        <div class="stat"><small><svg class="i"><use href="icons.svg#chat"/></svg>نقرات التواصل</small><b>642</b><p class="delta">↑ 9% عن الشهر السابق</p></div>
+        <div class="stat"><small><svg class="i"><use href="icons.svg#list"/></svg>إعلانات نشطة</small><b>38</b><p class="delta flat">غير محدود في باقتك</p></div>
+        <div class="stat"><small><svg class="i"><use href="icons.svg#pin-top"/></svg>إعلانات مثبّتة</small><b>3 / 5</b><p class="delta flat">يمكنك تثبيت 2 إضافيين</p></div>
+      </div>
+
+      <!-- مخطط أعمدة بسلسلة واحدة: لا حاجة لمفتاح ألوان -->
+      <div class="panel">
+        <div class="chart-head">
+          <div><h2 id="chart-h">المشاهدات اليومية</h2><p class="sub">1 – 14 أيلول</p></div>
+          <div style="text-align:left"><div class="big">5,612</div><p class="sub">مشاهدة خلال 14 يوماً</p></div>
+        </div>
+        <div class="plot" role="img" aria-labelledby="chart-h" aria-describedby="chart-sum">
+          <p id="chart-sum" class="sr-only">ارتفعت المشاهدات من 312 في 1 أيلول إلى ذروة 512 في 12 أيلول، وبلغت 448 في 14 أيلول.</p>
+          <div class="bars">
+            <div class="bar" tabindex="0" style="--h:52%"><i></i><span class="tip">1 أيلول · 312</span></div>
+            <div class="bar" tabindex="0" style="--h:59.3%"><i></i><span class="tip">2 أيلول · 356</span></div>
+            <div class="bar" tabindex="0" style="--h:67%"><i></i><span class="tip">3 أيلول · 402</span></div>
+            <div class="bar" tabindex="0" style="--h:63.3%"><i></i><span class="tip">4 أيلول · 380</span></div>
+            <div class="bar" tabindex="0" style="--h:49.7%"><i></i><span class="tip">5 أيلول · 298</span></div>
+            <div class="bar" tabindex="0" style="--h:44.2%"><i></i><span class="tip">6 أيلول · 265</span></div>
+            <div class="bar" tabindex="0" style="--h:68.3%"><i></i><span class="tip">7 أيلول · 410</span></div>
+            <div class="bar" tabindex="0" style="--h:75.8%"><i></i><span class="tip">8 أيلول · 455</span></div>
+            <div class="bar" tabindex="0" style="--h:71.7%"><i></i><span class="tip">9 أيلول · 430</span></div>
+            <div class="bar" tabindex="0" style="--h:78%"><i></i><span class="tip">10 أيلول · 468</span></div>
+            <div class="bar" tabindex="0" style="--h:65%"><i></i><span class="tip">11 أيلول · 390</span></div>
+            <div class="bar" tabindex="0" style="--h:85.3%"><i></i><span class="tip">12 أيلول · 512</span></div>
+            <div class="bar" tabindex="0" style="--h:81%"><i></i><span class="tip">13 أيلول · 486</span></div>
+            <div class="bar" tabindex="0" style="--h:74.7%"><i></i><span class="tip">14 أيلول · 448</span></div>
+          </div>
+          <span class="y-lbl" style="bottom:100%">600</span>
+          <span class="y-lbl" style="bottom:50%">300</span>
+          <span class="y-lbl" style="bottom:0">0</span>
+        </div>
+        <div class="bars-x" aria-hidden="true"><span>1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span><span>7</span><span>8</span><span>9</span><span>10</span><span>11</span><span>12</span><span>13</span><span>14</span></div>
+        <details class="table-view">
+          <summary>عرض البيانات كجدول</summary>
+          <div class="table-wrap" style="margin-top:8px">
+            <table class="tbl">
+              <thead><tr><th>اليوم</th><th>المشاهدات</th><th>اليوم</th><th>المشاهدات</th></tr></thead>
+              <tbody>
+                <tr><td>1 أيلول</td><td class="n">312</td><td>8 أيلول</td><td class="n">455</td></tr>
+                <tr><td>2 أيلول</td><td class="n">356</td><td>9 أيلول</td><td class="n">430</td></tr>
+                <tr><td>3 أيلول</td><td class="n">402</td><td>10 أيلول</td><td class="n">468</td></tr>
+                <tr><td>4 أيلول</td><td class="n">380</td><td>11 أيلول</td><td class="n">390</td></tr>
+                <tr><td>5 أيلول</td><td class="n">298</td><td>12 أيلول</td><td class="n">512</td></tr>
+                <tr><td>6 أيلول</td><td class="n">265</td><td>13 أيلول</td><td class="n">486</td></tr>
+                <tr><td>7 أيلول</td><td class="n">410</td><td>14 أيلول</td><td class="n">448</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </details>
+      </div>
+
+      <div>
+        <div class="panel-head"><h2>الأكثر مشاهدة</h2><a class="more" href="#listings" data-goto-tab="listings">كل الإعلانات<svg class="i i-sm"><use href="icons.svg#chev-left"/></svg></a></div>
+        <div class="table-wrap">
+          <table class="tbl">
+            <thead><tr><th>الإعلان</th><th>المشاهدات</th><th>نقرات التواصل</th><th>نسبة التواصل</th></tr></thead>
+            <tbody>
+              <tr><td><div class="who"><span class="thumb"><span class="ph t1"><svg viewBox="0 0 200 100" aria-hidden="true"><use href="icons.svg#v-sedan"/></svg></span></span>مرسيدس E200 2006</div></td><td class="n">1,904</td><td class="n">121</td><td class="n">6.4%</td></tr>
+              <tr><td><div class="who"><span class="thumb"><span class="ph t3"><svg viewBox="0 0 200 100" aria-hidden="true"><use href="icons.svg#v-pickup"/></svg></span></span>تويوتا هايلوكس 2008</div></td><td class="n">1,512</td><td class="n">98</td><td class="n">6.5%</td></tr>
+              <tr><td><div class="who"><span class="thumb"><span class="ph t5"><svg viewBox="0 0 200 100" aria-hidden="true"><use href="icons.svg#v-sedan"/></svg></span></span>كيا ريو 2012</div></td><td class="n">1,288</td><td class="n">64</td><td class="n">5.0%</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- الإعلانات -->
+    <section id="listings" role="tabpanel" aria-labelledby="t-ls" hidden>
+      <div class="pane-head">
+        <div><h1>إعلانات المعرض</h1><p class="sub">التثبيت: <b class="num">3 من 5</b> مستخدمة</p></div>
+        <a class="btn btn-primary" href="post.html?v=20260915c"><svg class="i"><use href="icons.svg#plus"/></svg>أضف إعلان</a>
+      </div>
+      <div class="filter-row">
+        <div class="ctl"><label class="sr-only" for="ls-q">ابحث في إعلاناتك</label><svg class="i" aria-hidden="true"><use href="icons.svg#search"/></svg><input class="input" id="ls-q" type="search" placeholder="ابحث بالعنوان"></div>
+        <div class="chips" role="radiogroup" aria-label="فلترة حسب الحالة" data-filter="#dl-rows">
+          <label class="chip"><input type="radio" name="dls" value="all" checked><span>الكل</span></label>
+          <label class="chip"><input type="radio" name="dls" value="active"><span>نشط</span></label>
+          <label class="chip"><input type="radio" name="dls" value="pending"><span>قيد المراجعة</span></label>
+          <label class="chip"><input type="radio" name="dls" value="sold"><span>مباع</span></label>
+        </div>
+      </div>
+      <div class="table-wrap">
+        <table class="tbl">
+          <thead><tr><th>الإعلان</th><th>الحالة</th><th>المشاهدات</th><th>ينتهي</th><th>تثبيت</th><th><span class="sr-only">إجراءات</span></th></tr></thead>
+          <tbody id="dl-rows">
+            <tr data-status="active"><td><div class="who"><span class="thumb"><span class="ph t1"><svg viewBox="0 0 200 100" aria-hidden="true"><use href="icons.svg#v-sedan"/></svg></span></span><span>مرسيدس E200 2006<small class="num">$11,000</small></span></div></td><td><span class="st st-active">نشط</span></td><td class="n">1,904</td><td class="n">مع الاشتراك</td><td><button class="switch" role="switch" aria-checked="true" aria-label="تثبيت مرسيدس E200" data-on="ثُبّت الإعلان في أعلى صفحتك" data-off="أُلغي تثبيت الإعلان"></button></td><td><div class="row-acts"><a class="btn btn-text" href="post.html?v=20260915c">تعديل</a><button class="btn btn-text" type="button" data-set-status="sold">تم البيع</button></div></td></tr>
+            <tr data-status="active"><td><div class="who"><span class="thumb"><span class="ph t5"><svg viewBox="0 0 200 100" aria-hidden="true"><use href="icons.svg#v-sedan"/></svg></span></span><span>كيا ريو 2012<small class="num">$6,500</small></span></div></td><td><span class="st st-active">نشط</span></td><td class="n">1,288</td><td class="n">مع الاشتراك</td><td><button class="switch" role="switch" aria-checked="true" aria-label="تثبيت كيا ريو" data-on="ثُبّت الإعلان في أعلى صفحتك" data-off="أُلغي تثبيت الإعلان"></button></td><td><div class="row-acts"><a class="btn btn-text" href="post.html?v=20260915c">تعديل</a><button class="btn btn-text" type="button" data-set-status="sold">تم البيع</button></div></td></tr>
+            <tr data-status="active"><td><div class="who"><span class="thumb"><span class="ph t3"><svg viewBox="0 0 200 100" aria-hidden="true"><use href="icons.svg#v-pickup"/></svg></span></span><span>تويوتا هايلوكس 2008<small class="num">$14,500</small></span></div></td><td><span class="st st-active">نشط</span></td><td class="n">1,512</td><td class="n">مع الاشتراك</td><td><button class="switch" role="switch" aria-checked="true" aria-label="تثبيت تويوتا هايلوكس" data-on="ثُبّت الإعلان في أعلى صفحتك" data-off="أُلغي تثبيت الإعلان"></button></td><td><div class="row-acts"><a class="btn btn-text" href="post.html?v=20260915c">تعديل</a><button class="btn btn-text" type="button" data-set-status="sold">تم البيع</button></div></td></tr>
+            <tr data-status="active"><td><div class="who"><span class="thumb"><span class="ph t2"><svg viewBox="0 0 200 100" aria-hidden="true"><use href="icons.svg#v-sedan"/></svg></span></span><span>كيا سيراتو 2014<small class="num">$9,300</small></span></div></td><td><span class="st st-active">نشط</span></td><td class="n">842</td><td class="n">مع الاشتراك</td><td><button class="switch" role="switch" aria-checked="false" aria-label="تثبيت كيا سيراتو" data-on="ثُبّت الإعلان في أعلى صفحتك" data-off="أُلغي تثبيت الإعلان"></button></td><td><div class="row-acts"><a class="btn btn-text" href="post.html?v=20260915c">تعديل</a><button class="btn btn-text" type="button" data-set-status="sold">تم البيع</button></div></td></tr>
+            <tr data-status="pending"><td><div class="who"><span class="thumb"><span class="ph t6"><svg viewBox="0 0 200 100" aria-hidden="true"><use href="icons.svg#v-van"/></svg></span></span><span>هيونداي H100 2010<small class="num">$8,700</small></span></div></td><td><span class="st st-pending">قيد المراجعة</span></td><td class="n">—</td><td class="n">—</td><td><button class="switch" role="switch" aria-checked="false" aria-label="تثبيت هيونداي H100" disabled></button></td><td><div class="row-acts"><a class="btn btn-text" href="post.html?v=20260915c">تعديل</a></div></td></tr>
+            <tr data-status="sold"><td><div class="who"><span class="thumb"><span class="ph t4"><svg viewBox="0 0 200 100" aria-hidden="true"><use href="icons.svg#v-sedan"/></svg></span></span><span>شيري تيغو 2013<small class="num">$6,900</small></span></div></td><td><span class="st st-sold">مباع</span></td><td class="n">1,031</td><td class="n">—</td><td><button class="switch" role="switch" aria-checked="false" aria-label="تثبيت شيري تيغو" disabled></button></td><td><div class="row-acts"></div></td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="empty" data-empty="dl-rows" hidden style="margin-top:12px"><div class="ic"><svg class="i i-lg"><use href="icons.svg#list"/></svg></div><h2>لا توجد إعلانات بهذه الحالة</h2></div>
+    </section>
+
+    <!-- الاشتراك -->
+    <section id="subscription" role="tabpanel" aria-labelledby="t-sub" hidden class="stack">
+      <div class="pane-head" style="margin-bottom:0"><h1>الاشتراك</h1></div>
+      <div class="panel">
+        <div class="panel-head">
+          <div><h2>باقة بريميوم</h2><p class="sub">إعلانات غير محدودة · تثبيت 5 · شارة موثّق</p></div>
+          <span class="st st-active" data-state="active">نشط</span>
+          <span class="st st-expired" data-state="expired">منتهي</span>
+        </div>
+        <dl class="kv">
+          <div><dt>تاريخ البدء</dt><dd>18 آب 2026</dd></div>
+          <div><dt>تاريخ الانتهاء</dt><dd>18 أيلول 2026</dd></div>
+          <div><dt>المبلغ</dt><dd class="num">$35 / شهر</dd></div>
+        </dl>
+        <div style="margin-top:14px">
+          <div class="meter-row"><span>المتبقي</span><b>4 أيام من 31</b></div>
+          <div class="meter warn" role="progressbar" aria-label="الأيام المتبقية من الاشتراك" aria-valuenow="4" aria-valuemin="0" aria-valuemax="31"><i style="width:13%"></i></div>
+        </div>
+        <div class="row-between" style="margin-top:18px;justify-content:flex-start;flex-wrap:wrap">
+          <a class="btn btn-primary" href="plans.html?v=20260915c#pay"><svg class="i"><use href="icons.svg#refresh"/></svg>تجديد الاشتراك</a>
+          <a class="btn btn-ghost" href="plans.html?v=20260915c">تغيير الباقة</a>
+        </div>
+      </div>
+
+      <div>
+        <div class="panel-head"><h2>سجل المدفوعات</h2></div>
+        <div class="table-wrap">
+          <table class="tbl">
+            <thead><tr><th>التاريخ</th><th>الباقة</th><th>المدة</th><th>المبلغ</th><th>الطريقة</th><th>الحالة</th></tr></thead>
+            <tbody>
+              <tr><td>18 آب 2026</td><td>بريميوم</td><td>شهر</td><td class="n">$35</td><td>شام كاش</td><td><span class="st st-active">مؤكد</span></td></tr>
+              <tr><td>18 أيار 2026</td><td>بريميوم</td><td>3 أشهر</td><td class="n">$94.5</td><td>سيريتل كاش</td><td><span class="st st-active">مؤكد</span></td></tr>
+              <tr><td>18 نيسان 2026</td><td>أساسية</td><td>شهر</td><td class="n">$15</td><td>MTN كاش</td><td><span class="st st-active">مؤكد</span></td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <div class="demo-states" aria-label="معاينة حالات الصفحة">
+      معاينة الحالات:
+      <a href="dealer-dashboard.html?v=20260915c">اشتراك نشط</a><a href="dealer-dashboard.html?state=expired">اشتراك منتهي</a>
+    </div>
+  </div>
+</main>
+
+<nav class="tabbar" aria-label="التنقل السريع">
+  <a href="index.html?v=20260915c"><svg class="i"><use href="icons.svg#home"/></svg><span>الرئيسية</span></a>
+  <a href="search.html?v=20260915c"><svg class="i"><use href="icons.svg#search"/></svg><span>بحث</span></a>
+  <a href="post.html?v=20260915c" class="tab-add"><span class="dot"><svg class="i"><use href="icons.svg#plus"/></svg></span><span>أضف إعلان</span></a>
+  <a href="dealer.html?v=20260915c"><svg class="i"><use href="icons.svg#store"/></svg><span>صفحتي</span></a>
+  <a href="dealer-dashboard.html?v=20260915c" aria-current="page"><svg class="i"><use href="icons.svg#grid"/></svg><span>اللوحة</span></a>
+</nav>
+
+<script src="app.js?v=20260915c" defer></script>
+</body>
+</html>

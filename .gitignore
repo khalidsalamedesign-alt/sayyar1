@@ -1,0 +1,11 @@
+# إعدادات محلية للمحرر وأدوات المعاينة
+.claude/
+.vscode/
+.idea/
+
+# ملفات مؤقتة
+__pycache__/
+*.pyc
+.DS_Store
+Thumbs.db
+desktop.ini

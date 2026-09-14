@@ -1,0 +1,347 @@
+<!doctype html>
+<html lang="ar" dir="rtl" data-cur="usd">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>سيّار — بيع وشراء الآليات المستعملة في سوريا</title>
+<meta name="description" content="سيارات وفانات وموتسكلات مستعملة للبيع في كل المحافظات السورية، من أفراد ومعارض موثّقة.">
+<meta name="theme-color" content="#17213D">
+<link rel="icon" href="../brand/sayyar-app-icon.svg" type="image/svg+xml">
+<script>try{var c=localStorage.getItem('sy-cur');if(c)document.documentElement.setAttribute('data-cur',c)}catch(e){}</script>
+<!-- نموذج أولي: الخطوط من Google مؤقتاً — في الموقع تُستضاف محلياً -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600&family=Manrope:wght@600;800&family=Noto+Kufi+Arabic:wght@700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css?v=20260915c">
+</head>
+<body>
+<a class="skip" href="#main">تخطَّ إلى المحتوى</a>
+
+<header class="site-header">
+  <div class="container hdr">
+    <a href="index.html?v=20260915c" class="logo" aria-label="سيّار — الرئيسية">
+      <span class="logo-word" aria-hidden="true">سيّار</span>
+      <svg class="logo-mark" aria-hidden="true"><use href="icons.svg#mark"/></svg>
+    </a>
+    <nav class="hdr-nav" aria-label="القائمة الرئيسية">
+      <a href="search.html?v=20260915c">تصفح الآليات</a>
+      <a href="dealers.html?v=20260915c">المعارض</a>
+      <a href="plans.html?v=20260915c">باقات المعارض</a>
+      <a href="safety.html?v=20260915c">نصائح الشراء الآمن</a>
+    </nav>
+    <div class="hdr-actions">
+      <div class="cur" role="group" aria-label="عملة عرض الأسعار">
+        <button type="button" data-cur="usd" aria-pressed="true">$</button>
+        <button type="button" data-cur="syp" aria-pressed="false">ل.س</button>
+      </div>
+      <a class="btn btn-text hide-sm" href="auth.html?v=20260915c">دخول</a>
+      <a class="btn btn-primary hide-sm" href="post.html?v=20260915c"><svg class="i"><use href="icons.svg#plus"/></svg>أضف إعلان</a>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- البطل والبحث -->
+  <section class="hero">
+    <div class="container">
+      <h1>ابحث عن آليتك المستعملة بثقة</h1>
+      <p class="lead">سيارات وفانات وموتسكلات من أفراد ومعارض موثّقة، في كل المحافظات.</p>
+
+      <form class="search-panel" action="search.html" role="search">
+        <div class="ctl">
+          <label class="sr-only" for="q">ابحث بالماركة أو الموديل</label>
+          <svg class="i" aria-hidden="true"><use href="icons.svg#search"/></svg>
+          <input class="input" id="q" name="q" type="search" placeholder="ابحث بالماركة أو الموديل، مثلاً: كيا ريو" autocomplete="off">
+        </div>
+        <div class="ctl">
+          <label class="sr-only" for="cat">الفئة</label>
+          <svg class="i" aria-hidden="true"><use href="icons.svg#car"/></svg>
+          <select class="select" id="cat" name="cat">
+            <option>كل الفئات</option><option>سيارات</option><option>فانات ونقل خفيف</option><option>موتسكلات</option>
+          </select>
+        </div>
+        <div class="ctl">
+          <label class="sr-only" for="city">المحافظة</label>
+          <svg class="i" aria-hidden="true"><use href="icons.svg#pin"/></svg>
+          <select class="select" id="city" name="city" data-fill="govs"><option value="">كل المحافظات</option></select>
+        </div>
+        <button class="btn btn-primary btn-lg" type="submit"><svg class="i"><use href="icons.svg#search"/></svg>ابحث</button>
+      </form>
+
+      <div class="quick">
+        <span>الأكثر بحثاً:</span>
+        <a href="search.html?v=20260915c">كيا ريو</a>
+        <a href="search.html?v=20260915c">هيونداي أفانتي</a>
+        <a href="search.html?v=20260915c">سوزوكي كاري</a>
+        <a href="search.html?v=20260915c">هوندا 125</a>
+      </div>
+    </div>
+  </section>
+
+  <div class="container">
+
+    <!-- الفئات -->
+    <section class="section" aria-labelledby="cats-h">
+      <div class="sec-head"><h2 id="cats-h">تصفح حسب الفئة</h2></div>
+      <ul class="cats">
+        <li><a class="cat" href="search.html?v=20260915c"><span class="ic"><svg class="i"><use href="icons.svg#car"/></svg></span><b>سيارات</b><small class="num">8,412 إعلان</small></a></li>
+        <li><a class="cat" href="search.html?v=20260915c"><span class="ic"><svg class="i"><use href="icons.svg#van"/></svg></span><b>فانات ونقل خفيف</b><small class="num">1,936 إعلان</small></a></li>
+        <li><a class="cat" href="search.html?v=20260915c"><span class="ic"><svg class="i"><use href="icons.svg#moto"/></svg></span><b>موتسكلات</b><small class="num">2,207 إعلان</small></a></li>
+        <li><div class="cat soon" aria-disabled="true"><span class="ic"><svg class="i"><use href="icons.svg#truck"/></svg></span><b>شاحنات</b><span class="badge badge-soon">قريباً</span></div></li>
+        <li><div class="cat soon" aria-disabled="true"><span class="ic"><svg class="i"><use href="icons.svg#digger"/></svg></span><b>معدات ثقيلة</b><span class="badge badge-soon">قريباً</span></div></li>
+        <li><div class="cat soon" aria-disabled="true"><span class="ic"><svg class="i"><use href="icons.svg#tractor"/></svg></span><b>معدات زراعية</b><span class="badge badge-soon">قريباً</span></div></li>
+        <li><div class="cat soon" aria-disabled="true"><span class="ic"><svg class="i"><use href="icons.svg#bolt"/></svg></span><b>مولدات وطاقة</b><span class="badge badge-soon">قريباً</span></div></li>
+      </ul>
+    </section>
+
+    <!-- المميزة -->
+    <section class="section" aria-labelledby="feat-h">
+      <div class="sec-head">
+        <div><h2 id="feat-h">إعلانات مميزة</h2><p class="sub">من معارض موثّقة</p></div>
+        <a class="more" href="search.html?v=20260915c">عرض الكل<svg class="i i-sm"><use href="icons.svg#chev-left"/></svg></a>
+      </div>
+      <div class="cards c4">
+        <article class="lcard">
+          <div class="media">
+            <div class="ph t1"><svg viewBox="0 0 200 100" aria-hidden="true"><use href="icons.svg#v-sedan"/></svg></div>
+            <div class="badges"><span class="badge badge-feat"><svg class="i"><use href="icons.svg#star"/></svg>مميز</span></div>
+            <button class="fav" type="button" aria-pressed="false" aria-label="أضف إلى المفضلة"><svg class="i"><use href="icons.svg#heart"/></svg></button>
+          </div>
+          <div class="body">
+            <h3><a href="listing.html?v=20260915c">مرسيدس E200 موديل 2006، صيانة وكالة</a></h3>
+            <p class="price"><span class="p-usd"><bdi>$11,000</bdi></span><span class="p-syp">143 مليون ل.س</span></p>
+            <p class="meta"><span>2006</span><span>210,000 كم</span><span>أوتوماتيك</span></p>
+            <p class="loc"><svg class="i"><use href="icons.svg#pin"/></svg>دمشق · منذ ساعة</p>
+          </div>
+        </article>
+        <article class="lcard">
+          <div class="media">
+            <div class="ph t3"><svg viewBox="0 0 200 100" aria-hidden="true"><use href="icons.svg#v-pickup"/></svg></div>
+            <div class="badges"><span class="badge badge-feat"><svg class="i"><use href="icons.svg#star"/></svg>مميز</span></div>
+            <button class="fav" type="button" aria-pressed="false" aria-label="أضف إلى المفضلة"><svg class="i"><use href="icons.svg#heart"/></svg></button>
+          </div>
+          <div class="body">
+            <h3><a href="listing.html?v=20260915c">تويوتا هايلوكس بيك أب 2008 دبل كابين</a></h3>
+            <p class="price"><span class="p-usd"><bdi>$14,500</bdi></span><span class="p-syp">188.5 مليون ل.س</span></p>
+            <p class="meta"><span>2008</span><span>240,000 كم</span><span>مازوت</span></p>
+            <p class="loc"><svg class="i"><use href="icons.svg#pin"/></svg>حمص · منذ 4 ساعات</p>
+          </div>
+        </article>
+        <article class="lcard">
+          <div class="media">
+            <div class="ph t2"><svg viewBox="0 0 200 100" aria-hidden="true"><use href="icons.svg#v-sedan"/></svg></div>
+            <div class="badges"><span class="badge badge-feat"><svg class="i"><use href="icons.svg#star"/></svg>مميز</span></div>
+            <button class="fav" type="button" aria-pressed="false" aria-label="أضف إلى المفضلة"><svg class="i"><use href="icons.svg#heart"/></svg></button>
+          </div>
+          <div class="body">
+            <h3><a href="listing.html?v=20260915c">كيا سيراتو 2014 فل كامل، فحص نظيف</a></h3>
+            <p class="price"><span class="p-usd"><bdi>$9,300</bdi></span><span class="p-syp">120.9 مليون ل.س</span></p>
+            <p class="meta"><span>2014</span><span>132,000 كم</span><span>أوتوماتيك</span></p>
+            <p class="loc"><svg class="i"><use href="icons.svg#pin"/></svg>ريف دمشق · منذ 6 ساعات</p>
+          </div>
+        </article>
+        <article class="lcard">
+          <div class="media">
+            <div class="ph t4"><svg viewBox="0 0 200 100" aria-hidden="true"><use href="icons.svg#v-van"/></svg></div>
+            <div class="badges"><span class="badge badge-feat"><svg class="i"><use href="icons.svg#star"/></svg>مميز</span></div>
+            <button class="fav" type="button" aria-pressed="false" aria-label="أضف إلى المفضلة"><svg class="i"><use href="icons.svg#heart"/></svg></button>
+          </div>
+          <div class="body">
+            <h3><a href="listing.html?v=20260915c">هيونداي H100 فان ركاب 2010</a></h3>
+            <p class="price"><span class="p-usd"><bdi>$8,700</bdi></span><span class="p-syp">113.1 مليون ل.س</span></p>
+            <p class="meta"><span>2010</span><span>275,000 كم</span><span>مازوت</span></p>
+            <p class="loc"><svg class="i"><use href="icons.svg#pin"/></svg>حماة · أمس</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- الأحدث -->
+    <section class="section" aria-labelledby="new-h">
+      <div class="sec-head">
+        <h2 id="new-h">أحدث الإعلانات</h2>
+        <a class="more" href="search.html?v=20260915c">عرض الكل<svg class="i i-sm"><use href="icons.svg#chev-left"/></svg></a>
+      </div>
+      <div class="cards c4">
+        <article class="lcard">
+          <div class="media">
+            <div class="ph t5"><svg viewBox="0 0 200 100" aria-hidden="true"><use href="icons.svg#v-sedan"/></svg></div>
+            <button class="fav" type="button" aria-pressed="false" aria-label="أضف إلى المفضلة"><svg class="i"><use href="icons.svg#heart"/></svg></button>
+          </div>
+          <div class="body">
+            <h3><a href="listing.html?v=20260915c">كيا ريو 2012، مركّب عليها جهاز غاز</a></h3>
+            <p class="price"><span class="p-usd"><bdi>$6,500</bdi></span><span class="p-syp">84.5 مليون ل.س</span></p>
+            <p class="meta"><span>2012</span><span>185,000 كم</span><span>عادي</span></p>
+            <p class="loc"><svg class="i"><use href="icons.svg#pin"/></svg>دمشق · منذ 20 دقيقة</p>
+          </div>
+        </article>
+        <article class="lcard">
+          <div class="media">
+            <div class="ph t1"><svg viewBox="0 0 200 100" aria-hidden="true"><use href="icons.svg#v-sedan"/></svg></div>
+            <button class="fav" type="button" aria-pressed="false" aria-label="أضف إلى المفضلة"><svg class="i"><use href="icons.svg#heart"/></svg></button>
+          </div>
+          <div class="body">
+            <h3><a href="listing.html?v=20260915c">هيونداي أفانتي 2011 أوتوماتيك</a></h3>
+            <p class="price"><span class="p-usd"><bdi>$7,200</bdi></span><span class="p-syp">93.6 مليون ل.س</span></p>
+            <p class="meta"><span>2011</span><span>160,000 كم</span><span>أوتوماتيك</span></p>
+            <p class="loc"><svg class="i"><use href="icons.svg#pin"/></svg>حلب · منذ 45 دقيقة</p>
+          </div>
+        </article>
+        <article class="lcard">
+          <div class="media">
+            <div class="ph t6"><svg viewBox="0 0 200 100" aria-hidden="true"><use href="icons.svg#v-moto"/></svg></div>
+            <button class="fav" type="button" aria-pressed="false" aria-label="أضف إلى المفضلة"><svg class="i"><use href="icons.svg#heart"/></svg></button>
+          </div>
+          <div class="body">
+            <h3><a href="listing.html?v=20260915c">هوندا CG 125 موديل 2019، أوراق كاملة</a></h3>
+            <p class="price"><span class="p-usd"><bdi>$950</bdi></span><span class="p-syp">12.4 مليون ل.س</span></p>
+            <p class="meta"><span>2019</span><span>22,000 كم</span><span>بنزين</span></p>
+            <p class="loc"><svg class="i"><use href="icons.svg#pin"/></svg>طرطوس · منذ ساعة</p>
+          </div>
+        </article>
+        <article class="lcard">
+          <div class="media">
+            <div class="ph t3"><svg viewBox="0 0 200 100" aria-hidden="true"><use href="icons.svg#v-van"/></svg></div>
+            <button class="fav" type="button" aria-pressed="false" aria-label="أضف إلى المفضلة"><svg class="i"><use href="icons.svg#heart"/></svg></button>
+          </div>
+          <div class="body">
+            <h3><a href="listing.html?v=20260915c">سوزوكي كاري فان بضائع 2015</a></h3>
+            <p class="price"><span class="p-usd"><bdi>$5,800</bdi></span><span class="p-syp">75.4 مليون ل.س</span></p>
+            <p class="meta"><span>2015</span><span>98,000 كم</span><span>بنزين</span></p>
+            <p class="loc"><svg class="i"><use href="icons.svg#pin"/></svg>اللاذقية · منذ ساعتين</p>
+          </div>
+        </article>
+        <article class="lcard">
+          <div class="media">
+            <div class="ph t4"><svg viewBox="0 0 200 100" aria-hidden="true"><use href="icons.svg#v-sedan"/></svg></div>
+            <button class="fav" type="button" aria-pressed="false" aria-label="أضف إلى المفضلة"><svg class="i"><use href="icons.svg#heart"/></svg></button>
+          </div>
+          <div class="body">
+            <h3><a href="listing.html?v=20260915c">شيري تيغو 2013 دفع رباعي</a></h3>
+            <p class="price"><span class="p-usd"><bdi>$6,900</bdi></span><span class="p-syp">89.7 مليون ل.س</span></p>
+            <p class="meta"><span>2013</span><span>150,000 كم</span><span>عادي</span></p>
+            <p class="loc"><svg class="i"><use href="icons.svg#pin"/></svg>السويداء · منذ 3 ساعات</p>
+          </div>
+        </article>
+        <article class="lcard">
+          <div class="media">
+            <div class="ph t2"><svg viewBox="0 0 200 100" aria-hidden="true"><use href="icons.svg#v-sedan"/></svg></div>
+            <button class="fav" type="button" aria-pressed="false" aria-label="أضف إلى المفضلة"><svg class="i"><use href="icons.svg#heart"/></svg></button>
+          </div>
+          <div class="body">
+            <h3><a href="listing.html?v=20260915c">بيجو 206 موديل 2007، بحاجة دهان</a></h3>
+            <p class="price"><span class="p-usd"><bdi>$3,900</bdi></span><span class="p-syp">50.7 مليون ل.س</span></p>
+            <p class="meta"><span>2007</span><span>198,000 كم</span><span>عادي</span></p>
+            <p class="loc"><svg class="i"><use href="icons.svg#pin"/></svg>درعا · منذ 5 ساعات</p>
+          </div>
+        </article>
+        <article class="lcard">
+          <div class="media">
+            <div class="ph t5"><svg viewBox="0 0 200 100" aria-hidden="true"><use href="icons.svg#v-moto"/></svg></div>
+            <button class="fav" type="button" aria-pressed="false" aria-label="أضف إلى المفضلة"><svg class="i"><use href="icons.svg#heart"/></svg></button>
+          </div>
+          <div class="body">
+            <h3><a href="listing.html?v=20260915c">ياماها YBR 2020 نظيف جداً</a></h3>
+            <p class="price"><span class="p-usd"><bdi>$1,400</bdi></span><span class="p-syp">18.2 مليون ل.س</span></p>
+            <p class="meta"><span>2020</span><span>15,000 كم</span><span>بنزين</span></p>
+            <p class="loc"><svg class="i"><use href="icons.svg#pin"/></svg>إدلب · أمس</p>
+          </div>
+        </article>
+        <article class="lcard">
+          <div class="media">
+            <div class="ph t6"><svg viewBox="0 0 200 100" aria-hidden="true"><use href="icons.svg#v-sedan"/></svg></div>
+            <button class="fav" type="button" aria-pressed="false" aria-label="أضف إلى المفضلة"><svg class="i"><use href="icons.svg#heart"/></svg></button>
+          </div>
+          <div class="body">
+            <h3><a href="listing.html?v=20260915c">ميتسوبيشي لانسر 2009، مفرزة</a></h3>
+            <p class="price"><span class="p-usd"><bdi>$5,500</bdi></span><span class="p-syp">71.5 مليون ل.س</span></p>
+            <p class="meta"><span>2009</span><span>220,000 كم</span><span>عادي</span></p>
+            <p class="loc"><svg class="i"><use href="icons.svg#pin"/></svg>دير الزور · أمس</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- المحافظات -->
+    <section class="section" aria-labelledby="gov-h">
+      <div class="sec-head"><h2 id="gov-h">تصفح حسب المحافظة</h2></div>
+      <ul class="govs">
+        <li><a class="gov" href="search.html?v=20260915c">دمشق <small class="num">3,120</small></a></li>
+        <li><a class="gov" href="search.html?v=20260915c">ريف دمشق <small class="num">1,845</small></a></li>
+        <li><a class="gov" href="search.html?v=20260915c">حلب <small class="num">2,410</small></a></li>
+        <li><a class="gov" href="search.html?v=20260915c">حمص <small class="num">1,208</small></a></li>
+        <li><a class="gov" href="search.html?v=20260915c">حماة <small class="num">876</small></a></li>
+        <li><a class="gov" href="search.html?v=20260915c">اللاذقية <small class="num">954</small></a></li>
+        <li><a class="gov" href="search.html?v=20260915c">طرطوس <small class="num">702</small></a></li>
+        <li><a class="gov" href="search.html?v=20260915c">إدلب <small class="num">511</small></a></li>
+        <li><a class="gov" href="search.html?v=20260915c">درعا <small class="num">433</small></a></li>
+        <li><a class="gov" href="search.html?v=20260915c">السويداء <small class="num">298</small></a></li>
+        <li><a class="gov" href="search.html?v=20260915c">القنيطرة <small class="num">87</small></a></li>
+        <li><a class="gov" href="search.html?v=20260915c">دير الزور <small class="num">264</small></a></li>
+        <li><a class="gov" href="search.html?v=20260915c">الرقة <small class="num">141</small></a></li>
+        <li><a class="gov" href="search.html?v=20260915c">الحسكة <small class="num">196</small></a></li>
+      </ul>
+    </section>
+
+    <!-- المعارض -->
+    <section class="section" id="dealers" aria-labelledby="dealers-h">
+      <div class="sec-head">
+        <div><h2 id="dealers-h">معارض موثّقة</h2><p class="sub">تحقّقنا من هوية المعرض وعنوانه</p></div>
+        <a class="more" href="dealers.html?v=20260915c">دليل المعارض<svg class="i i-sm"><use href="icons.svg#chev-left"/></svg></a>
+      </div>
+      <div class="dealers">
+        <a class="dealer" href="dealer.html?v=20260915c"><span class="avatar">ن</span><span><b>معرض النور للسيارات<svg class="i" role="img" aria-label="معرض موثّق"><use href="icons.svg#verified"/></svg></b><small>دمشق، المزة · <span class="num">38</span> إعلان</small></span></a>
+        <a class="dealer" href="dealer.html?v=20260915c"><span class="avatar" style="background:#2E3B5E">ش</span><span><b>الشهباء موتورز<svg class="i" role="img" aria-label="معرض موثّق"><use href="icons.svg#verified"/></svg></b><small>حلب، الفرقان · <span class="num">54</span> إعلان</small></span></a>
+        <a class="dealer" href="dealer.html?v=20260915c"><span class="avatar" style="background:#3A4254">ع</span><span><b>معرض العاصي<svg class="i" role="img" aria-label="معرض موثّق"><use href="icons.svg#verified"/></svg></b><small>حمص، الوعر · <span class="num">21</span> إعلان</small></span></a>
+        <a class="dealer" href="dealer.html?v=20260915c"><span class="avatar" style="background:#24324F">س</span><span><b>الساحل لتجارة الآليات<svg class="i" role="img" aria-label="معرض موثّق"><use href="icons.svg#verified"/></svg></b><small>اللاذقية · <span class="num">29</span> إعلان</small></span></a>
+      </div>
+      <div class="band">
+        <div>
+          <h3>عندك معرض أو مكتب سيارات؟</h3>
+          <p class="sub">صفحة خاصة لمعرضك، إعلانات أكثر، وشارة «معرض موثّق» تزيد ثقة المشترين.</p>
+        </div>
+        <a class="btn btn-primary" href="plans.html?v=20260915c">اطّلع على الباقات</a>
+      </div>
+    </section>
+
+    <!-- الثقة -->
+    <section class="section" aria-labelledby="trust-h">
+      <h2 id="trust-h" class="sr-only">لماذا سيّار</h2>
+      <div class="trust">
+        <div><span class="ic"><svg class="i"><use href="icons.svg#shield"/></svg></span><span><b>كل إعلان يُراجع قبل نشره</b><p>نراجع الإعلانات يدوياً ونحذف المكرر والوهمي.</p></span></div>
+        <div><span class="ic"><svg class="i"><use href="icons.svg#verified"/></svg></span><span><b>معارض موثّقة</b><p>شارة التوثيق تعني أننا تحقّقنا من المعرض وعنوانه.</p></span></div>
+        <div><span class="ic"><svg class="i"><use href="icons.svg#info"/></svg></span><span><b>السعر بالدولار والليرة</b><p>سعر الصرف يُحدَّث باستمرار مع تاريخ آخر تحديث.</p></span></div>
+      </div>
+    </section>
+
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="f-cols">
+      <div class="f-brand">
+        <a href="index.html?v=20260915c" class="logo" aria-label="سيّار"><span class="logo-word" aria-hidden="true">سيّار</span><svg class="logo-mark" aria-hidden="true"><use href="icons.svg#mark"/></svg></a>
+        <p>منصة سورية لبيع وشراء الآليات المستعملة. عاين الآلية شخصياً قبل الدفع.</p>
+      </div>
+      <div><h4>تصفح</h4><ul><li><a href="search.html?v=20260915c">سيارات</a></li><li><a href="search.html?v=20260915c">فانات ونقل خفيف</a></li><li><a href="search.html?v=20260915c">موتسكلات</a></li></ul></div>
+      <div><h4>للمعارض</h4><ul><li><a href="dealers.html?v=20260915c">دليل المعارض</a></li><li><a href="plans.html?v=20260915c">باقات الاشتراك</a></li></ul></div>
+      <div><h4>سيّار</h4><ul><li><a href="about.html?v=20260915c">من نحن</a></li><li><a href="safety.html?v=20260915c">نصائح الشراء الآمن</a></li><li><a href="terms.html?v=20260915c">شروط الاستخدام</a></li><li><a href="privacy.html?v=20260915c">سياسة الخصوصية</a></li><li><a href="contact.html?v=20260915c">اتصل بنا</a></li></ul></div>
+    </div>
+    <div class="f-bottom"><span>© 2026 سيّار</span><span>سعر الصرف: <span class="num">13,000</span> ل.س للدولار · آخر تحديث 14 أيلول</span></div>
+  </div>
+</footer>
+
+<nav class="tabbar" aria-label="التنقل السريع">
+  <a href="index.html?v=20260915c" aria-current="page"><svg class="i"><use href="icons.svg#home"/></svg><span>الرئيسية</span></a>
+  <a href="search.html?v=20260915c"><svg class="i"><use href="icons.svg#search"/></svg><span>بحث</span></a>
+  <a href="post.html?v=20260915c" class="tab-add"><span class="dot"><svg class="i"><use href="icons.svg#plus"/></svg></span><span>أضف إعلان</span></a>
+  <a href="account.html?v=20260915c#favorites"><svg class="i"><use href="icons.svg#heart"/></svg><span>المفضلة</span></a>
+  <a href="account.html?v=20260915c"><svg class="i"><use href="icons.svg#user"/></svg><span>حسابي</span></a>
+</nav>
+
+<script src="data.js?v=20260915c" defer></script>
+<script src="app.js?v=20260915c" defer></script>
+</body>
+</html>

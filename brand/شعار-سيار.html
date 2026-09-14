@@ -1,0 +1,371 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>شعار سيّار</title>
+<link rel="icon" href="sayyar-app-icon.svg" type="image/svg+xml">
+<!-- صفحة عرض الهوية فقط؛ الموقع نفسه يستضيف الخطوط محلياً -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;600&family=Manrope:wght@700;800&family=Noto+Kufi+Arabic:wght@700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="tokens.css">
+<style>
+  *, *::before, *::after { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--sy-bg);
+    color: var(--sy-ink);
+    font: 400 15px/1.7 var(--sy-font-ui);
+    -webkit-font-smoothing: antialiased;
+  }
+  .page { max-width: 720px; margin: 0 auto; padding: 56px 16px 80px; }
+  svg.mark { display: block; fill: currentColor; }
+
+  /* ===== الغلاف ===== */
+  .hero { text-align: center; padding-block: 24px 40px; }
+  .hero .word { font: 800 clamp(64px, 16vw, 104px)/1.1 var(--sy-font-logo); color: var(--sy-navy); margin: 0; }
+  .hero .latin { font: 800 13px/1 var(--sy-font-latin); letter-spacing: .28em; color: var(--sy-muted); margin-top: 6px; }
+  .hero p { color: var(--sy-text-2); max-width: 400px; margin: 28px auto 0; }
+
+  /* ===== عناوين الأقسام ===== */
+  section { margin-top: 56px; }
+  .eyebrow { font: 600 12px/1 var(--sy-font-ui); color: var(--sy-amber-text); margin: 0 0 10px; }
+  h2 { font: 700 22px/1.4 var(--sy-font-logo); margin: 0 0 24px; color: var(--sy-ink); text-wrap: balance; }
+  h3 { font: 700 17px/1.4 var(--sy-font-logo); margin: 0; color: var(--sy-ink); }
+  .kicker { font-size: 11px; color: var(--sy-muted); margin: 0 0 4px; }
+
+  .card { background: #fff; border: 1px solid var(--sy-border); border-radius: 8px; }
+  .caption { font-size: 11px; color: var(--sy-muted); text-align: center; margin-top: 10px; }
+
+  /* ===== الاتجاه الأول ===== */
+  .lead { padding: 24px; }
+  .lead-head { display: flex; justify-content: space-between; align-items: flex-start; gap: 12px; flex-wrap: wrap; }
+  .pill { font-size: 11px; background: var(--sy-gray); color: var(--sy-text-2); border-radius: 999px; padding: 4px 12px; }
+  .lead-body { display: grid; grid-template-columns: 112px 1fr; gap: 24px; margin-top: 28px; align-items: start; }
+  .tile { background: var(--sy-gray); border-radius: 6px; aspect-ratio: 1; display: grid; place-items: center; color: var(--sy-navy); }
+  .lead-body p { margin: 0; font-size: 13.5px; color: var(--sy-text-2); }
+  .lead-body p + p { margin-top: 12px; font-size: 12.5px; color: var(--sy-muted); }
+
+  .lockups { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 28px; }
+  .lockup { border: 1px solid var(--sy-border); border-radius: 6px; min-height: 76px; display: grid; place-items: center; padding: 16px; color: var(--sy-navy); }
+  .lockup.wide { grid-column: 1 / -1; min-height: 60px; }
+  .lockup.dark { background: var(--sy-navy); border-color: var(--sy-navy); color: #fff; }
+
+  .h-lock { display: inline-flex; align-items: center; gap: .45em; direction: rtl; }
+  .h-lock .ar { font: 800 1em/1 var(--sy-font-logo); }
+  .h-lock .mark { width: .78em; height: .78em; }
+  .h-lock.en { direction: ltr; }
+  .h-lock.en .en-word { font: 800 .8em/1 var(--sy-font-latin); letter-spacing: .14em; }
+  .v-lock { display: inline-flex; flex-direction: column; align-items: center; gap: 6px; }
+  .v-lock .mark { width: 18px; height: 18px; }
+  .v-lock .ar { font: 800 18px/1 var(--sy-font-logo); }
+
+  /* ===== الاتجاهات البديلة ===== */
+  .alts { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin-top: 10px; }
+  .alt { padding: 18px; display: flex; flex-direction: column; }
+  .alt .tile { aspect-ratio: 16 / 10; margin-top: 14px; }
+  .alt p { font-size: 12px; color: var(--sy-text-2); margin: 12px 0 16px; flex: 1; }
+  .alt .kicker { margin: 0 0 4px; flex: none; color: var(--sy-muted); font-size: 11px; }
+  .alt .h-lock { font-size: 18px; color: var(--sy-navy); align-self: center; }
+  .alt svg.stroke { fill: none; stroke: currentColor; stroke-linecap: round; }
+
+  /* ===== الألوان ===== */
+  .swatches { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; }
+  .swatch { overflow: hidden; }
+  .swatch .chip { height: 64px; border-bottom: 1px solid var(--sy-border); }
+  .swatch .info { padding: 12px 14px 14px; }
+  .swatch b { font: 600 13px/1.4 var(--sy-font-ui); display: block; }
+  .swatch code { font: 500 11px/1.6 var(--sy-font-latin); color: var(--sy-muted); direction: ltr; display: inline-block; }
+  .swatch p { font-size: 11.5px; color: var(--sy-text-2); margin: 6px 0 0; }
+
+  /* ===== الخطوط ===== */
+  .fonts { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+  .font { padding: 24px 20px 18px; }
+  .font .sample { font-size: 38px; line-height: 1.3; color: var(--sy-navy); }
+  .font .meta { font-size: 11px; color: var(--sy-muted); margin-top: 10px; }
+  .font .meta bdi { font-family: var(--sy-font-latin); }
+  .font.full { grid-column: 1 / -1; }
+  .font.full .sample { font: 400 16px/1.7 var(--sy-font-ui); color: var(--sy-ink); }
+
+  /* ===== التطبيقات ===== */
+  .apps { display: grid; grid-template-columns: 1fr 1fr 2fr; gap: 10px; }
+  .app { padding: 16px; display: flex; flex-direction: column; align-items: center; justify-content: space-between; }
+  .phone { width: 100%; max-width: 92px; aspect-ratio: 9 / 16; border: 3px solid var(--sy-ink); border-radius: 14px; padding: 10px 8px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 6px; align-content: start; }
+  .phone i { aspect-ratio: 1; border-radius: 5px; background: var(--sy-border); }
+  .phone i.me { background: var(--sy-navy); display: grid; place-items: center; color: #fff; }
+  .phone i.me svg { width: 60%; height: 60%; }
+  .avatar { width: 72px; height: 72px; border-radius: 50%; background: var(--sy-navy); color: #fff; display: grid; place-items: center; margin-block: auto; }
+  .avatar svg { width: 44%; height: 44%; }
+  .site-header { width: 100%; border: 1px solid var(--sy-border); background: var(--sy-bg); border-radius: 6px; display: flex; align-items: center; justify-content: space-between; padding: 10px 12px; gap: 8px; }
+  .site-header .h-lock { font-size: 15px; color: var(--sy-navy); }
+  .site-header nav { display: flex; gap: 12px; font-size: 11px; color: var(--sy-text-2); }
+  .site-header nav .cta { color: var(--sy-amber-text); font-weight: 600; }
+  .app.header { justify-content: flex-start; }
+
+  .apps2 { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 10px; }
+  .bcard { width: 100%; aspect-ratio: 1.75; background: var(--sy-navy); color: #fff; border-radius: 6px; padding: 16px 18px; display: flex; flex-direction: column; justify-content: space-between; }
+  .bcard .h-lock { font-size: 15px; }
+  .bcard .who { font-size: 10px; color: #C9CEDA; }
+  .bcard .tel { font: 600 10px/1.6 var(--sy-font-latin); color: var(--sy-amber); direction: ltr; text-align: right; }
+  .grounds { width: 100%; display: grid; gap: 8px; }
+  .grounds div { border-radius: 6px; padding: 16px; display: grid; place-items: center; }
+  .grounds .h-lock { font-size: 18px; }
+  .grounds .light { background: var(--sy-bg); border: 1px solid var(--sy-border); color: var(--sy-navy); }
+  .grounds .dark { background: var(--sy-navy); color: #fff; }
+
+  /* ===== البناء والتصغير ===== */
+  .build { display: grid; grid-template-columns: 1.3fr 1fr; gap: 10px; }
+  .build .card { padding: 20px; display: grid; place-items: center; }
+  .grid-svg { width: 100%; max-width: 220px; color: var(--sy-navy); }
+  .scale { display: grid; gap: 14px; justify-items: start; }
+  .scale div { display: flex; align-items: center; gap: 14px; color: var(--sy-navy); }
+  .scale span { font: 500 11px/1 var(--sy-font-latin); color: var(--sy-muted); width: 36px; text-align: left; direction: ltr; }
+  .scale .t { background: var(--sy-gray); border-radius: 4px; display: grid; place-items: center; }
+
+  footer { margin-top: 64px; text-align: center; font-size: 11px; color: var(--sy-muted); }
+
+  @media (max-width: 600px) {
+    .page { padding-top: 32px; }
+    .lead { padding: 18px; }
+    .lead-body { grid-template-columns: 1fr; }
+    .lead-body .tile { max-width: 112px; }
+    .alts, .swatches { grid-template-columns: 1fr; }
+    .alt .tile { aspect-ratio: auto; height: 120px; }
+    .fonts, .apps2, .build { grid-template-columns: 1fr; }
+    .apps { grid-template-columns: 1fr 1fr; }
+    .app.header { grid-column: 1 / -1; }
+  }
+</style>
+</head>
+<body>
+
+<!-- رموز قابلة لإعادة الاستخدام -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="sy-mark" viewBox="0 0 100 100">
+    <g transform="rotate(-6 50 50)">
+      <rect x="20" y="42" width="14" height="38" rx="6"/>
+      <rect x="44" y="26" width="14" height="54" rx="6"/>
+      <rect x="68" y="10" width="14" height="70" rx="6"/>
+    </g>
+  </symbol>
+</svg>
+
+<main class="page">
+
+  <header class="hero">
+    <h1 class="word">سيّار</h1>
+    <div class="latin" lang="en">SAYYAR</div>
+    <p>استكشاف اتجاهات الشعار — منصة سورية لبيع وشراء الآليات المستعملة. موثوق، واضح، عملي.</p>
+  </header>
+
+  <!-- ٠١ الاتجاهات -->
+  <section aria-labelledby="s1">
+    <p class="eyebrow">٠١ — الاتجاهات</p>
+    <h2 id="s1">أربعة أفكار للرمز، بلا سيارات ولا مقاود</h2>
+
+    <article class="card lead">
+      <div class="lead-head">
+        <div>
+          <p class="kicker">الاتجاه ١ — الأقوى</p>
+          <h3>حرف السين</h3>
+        </div>
+        <span class="pill">الاتجاه المُختار للتطبيقات</span>
+      </div>
+
+      <div class="lead-body">
+        <div class="tile"><svg class="mark" width="48" height="48" role="img" aria-label="رمز سيّار"><use href="#sy-mark"/></svg></div>
+        <div>
+          <p>الأسنان الثلاثة لحرف السين تحمل إحساساً طبيعياً بالحركة والاندفاع للأمام، وتُقرأ أيضاً كخطوط طريق متتابعة. الرمز مبنيّ من ثلاثة أعمدة متصاعدة بميلة خفيفة واحدة — شكل هندسي صرف، بلا أي تلميح لسيارة أو عجلة.</p>
+          <p>يبقى واضحاً بحجم 16 بكسل، ويعمل كأيقونة مستقلة دون الاعتماد على النص. هو الاتجاه المرشّح للهوية الكاملة.</p>
+        </div>
+      </div>
+
+      <div class="lockups">
+        <div class="lockup" aria-label="النسخة الأفقية">
+          <span class="h-lock" style="font-size:24px"><span class="ar">سيّار</span><svg class="mark" aria-hidden="true"><use href="#sy-mark"/></svg></span>
+        </div>
+        <div class="lockup" aria-label="النسخة المكدّسة">
+          <span class="v-lock"><svg class="mark" aria-hidden="true"><use href="#sy-mark"/></svg><span class="ar">سيّار</span></span>
+        </div>
+        <div class="lockup wide" aria-label="النسخة الإنجليزية">
+          <span class="h-lock en" lang="en" style="font-size:20px"><span class="en-word">SAYYAR</span><svg class="mark" aria-hidden="true"><use href="#sy-mark"/></svg></span>
+        </div>
+        <div class="lockup" aria-label="أحادي اللون — داكن على فاتح">
+          <span class="h-lock" style="font-size:22px;color:var(--sy-ink)"><span class="ar">سيّار</span><svg class="mark" aria-hidden="true"><use href="#sy-mark"/></svg></span>
+        </div>
+        <div class="lockup dark" aria-label="أحادي اللون — أبيض على داكن">
+          <span class="h-lock" style="font-size:22px"><span class="ar">سيّار</span><svg class="mark" aria-hidden="true"><use href="#sy-mark"/></svg></span>
+        </div>
+      </div>
+    </article>
+
+    <div class="alts">
+      <article class="card alt">
+        <p class="kicker">الاتجاه ٢</p>
+        <h3>الشدّة كحركة</h3>
+        <div class="tile">
+          <svg class="stroke" width="44" height="44" viewBox="0 0 100 100" aria-hidden="true">
+            <circle cx="30" cy="68" r="11" fill="currentColor" stroke="none"/>
+            <path d="M52 64 L74 32" stroke-width="12"/>
+          </svg>
+        </div>
+        <p>الشدّة فوق الياء تتحوّل إلى أثر سرعة: نقطة ثابتة ومسار متصاعد منها. عنصر مستخلص من التشكيل اللغوي نفسه، دون عناصر مضافة.</p>
+        <span class="h-lock"><span class="ar">سيّار</span><svg class="stroke" width="14" height="14" viewBox="0 0 100 100" aria-hidden="true"><circle cx="30" cy="68" r="12" fill="currentColor" stroke="none"/><path d="M52 64 L74 32" stroke-width="14"/></svg></span>
+      </article>
+
+      <article class="card alt">
+        <p class="kicker">الاتجاه ٣</p>
+        <h3>الطريق والمسار</h3>
+        <div class="tile">
+          <svg class="stroke" width="44" height="44" viewBox="0 0 100 100" aria-hidden="true">
+            <path d="M22 80 L40 58 C48 48 52 46 60 42 L78 26" stroke-width="12" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <p>مسار واحد ينحني ويمتد للأمام — بخط واحد، يوحي بالرحلة والانتقال دون رسم طريق أو سيارة حرفياً.</p>
+        <span class="h-lock"><span class="ar">سيّار</span><svg class="stroke" width="14" height="14" viewBox="0 0 100 100" aria-hidden="true"><path d="M22 80 L40 58 C48 48 52 46 60 42 L78 26" stroke-width="14" stroke-linejoin="round"/></svg></span>
+      </article>
+
+      <article class="card alt">
+        <p class="kicker">الاتجاه ٤</p>
+        <h3>المحور والدوران</h3>
+        <div class="tile">
+          <svg class="stroke" width="44" height="44" viewBox="0 0 100 100" aria-hidden="true">
+            <circle cx="50" cy="50" r="34" stroke-width="10"/>
+            <circle cx="50" cy="50" r="11" fill="currentColor" stroke="none"/>
+          </svg>
+        </div>
+        <p>دائرة ومركزها — تجريد كامل لفكرة المحور والدوران، بلا أي إشارة لإطار سيارة حقيقي.</p>
+        <span class="h-lock"><span class="ar">سيّار</span><svg class="stroke" width="14" height="14" viewBox="0 0 100 100" aria-hidden="true"><circle cx="50" cy="50" r="34" stroke-width="13"/><circle cx="50" cy="50" r="12" fill="currentColor" stroke="none"/></svg></span>
+      </article>
+    </div>
+  </section>
+
+  <!-- ٠٢ الألوان -->
+  <section aria-labelledby="s2">
+    <p class="eyebrow">٠٢ — الألوان</p>
+    <h2 id="s2">لوحة محدودة، بلا تدرجات</h2>
+    <div class="swatches">
+      <div class="card swatch">
+        <div class="chip" style="background:var(--sy-navy)"></div>
+        <div class="info"><b>كحلي أساسي</b><code>#17213D</code>
+          <p>لون الهوية الأساسي — يوحي بالثقة والجدية، ويُستخدم في الرمز والنصوص الأساسية.</p></div>
+      </div>
+      <div class="card swatch">
+        <div class="chip" style="background:var(--sy-gray)"></div>
+        <div class="info"><b>رمادي محايد</b><code>#F2F3F5</code>
+          <p>للخلفيات وفواصل الواجهة، دون منافسة الرمز أو الاسم.</p></div>
+      </div>
+      <div class="card swatch">
+        <div class="chip" style="background:var(--sy-amber)"></div>
+        <div class="info"><b>كهرماني — للإجراء</b><code>#E8923C</code>
+          <p>يُستخدم بحدود شديدة: الأسعار وأزرار التواصل فقط، لا في الرمز نفسه.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ٠٣ الخطوط -->
+  <section aria-labelledby="s3">
+    <p class="eyebrow">٠٣ — الخطوط</p>
+    <h2 id="s3">هندسي وحديث، بلا زخرفة</h2>
+    <div class="fonts">
+      <div class="card font">
+        <div class="sample" style="font-family:var(--sy-font-logo);font-weight:800">سيّار</div>
+        <div class="meta"><bdi>Noto Kufi Arabic</bdi> — للشعار والعناوين العربية، بمعالجة مخصصة عند التنفيذ النهائي</div>
+      </div>
+      <div class="card font">
+        <div class="sample" lang="en" dir="ltr" style="font-family:var(--sy-font-latin);font-weight:800;letter-spacing:.04em;text-align:right">SAYYAR</div>
+        <div class="meta"><bdi>Manrope</bdi> — للنسخة الإنجليزية والعناوين اللاتينية</div>
+      </div>
+      <div class="card font full">
+        <div class="sample">أضف سيارتك في دقائق، وابدأ التفاوض مع المشترين مباشرة.</div>
+        <div class="meta"><bdi>IBM Plex Sans Arabic</bdi> — لنصوص الواجهة والمحتوى</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ٠٤ التطبيقات -->
+  <section aria-labelledby="s4">
+    <p class="eyebrow">٠٤ — التطبيقات</p>
+    <h2 id="s4">الاتجاه ١ في الاستخدام الفعلي</h2>
+    <div class="apps">
+      <div class="card app">
+        <div class="phone" aria-hidden="true"><i></i><i class="me"><svg class="mark"><use href="#sy-mark"/></svg></i><i></i><i></i><i></i><i></i></div>
+        <div class="caption">أيقونة تطبيق</div>
+      </div>
+      <div class="card app">
+        <div class="avatar"><svg class="mark" aria-hidden="true"><use href="#sy-mark"/></svg></div>
+        <div class="caption">صورة بروفايل</div>
+      </div>
+      <div class="card app header">
+        <div class="site-header">
+          <span class="h-lock"><span class="ar">سيّار</span><svg class="mark" aria-hidden="true"><use href="#sy-mark"/></svg></span>
+          <nav aria-label="مثال"><span>تصفح</span><span>بيع آليتك</span><span class="cta">تواصل</span></nav>
+        </div>
+        <div class="caption">هيدر الموقع</div>
+      </div>
+    </div>
+    <div class="apps2">
+      <div class="card app">
+        <div class="bcard">
+          <span class="h-lock"><span class="ar">سيّار</span><svg class="mark" aria-hidden="true"><use href="#sy-mark"/></svg></span>
+          <div>
+            <div class="who">محمد أحمد — مدير الحسابات</div>
+            <div class="tel">+963 999 000 000</div>
+          </div>
+        </div>
+        <div class="caption">بطاقة عمل</div>
+      </div>
+      <div class="card app">
+        <div class="grounds">
+          <div class="light"><span class="h-lock"><span class="ar">سيّار</span><svg class="mark" aria-hidden="true"><use href="#sy-mark"/></svg></span></div>
+          <div class="dark"><span class="h-lock"><span class="ar">سيّار</span><svg class="mark" aria-hidden="true"><use href="#sy-mark"/></svg></span></div>
+        </div>
+        <div class="caption">خلفية فاتحة وداكنة</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ٠٥ البناء والتصغير -->
+  <section aria-labelledby="s5">
+    <p class="eyebrow">٠٥ — البناء والتصغير</p>
+    <h2 id="s5">دقّة هندسية، وضوح عند التصغير</h2>
+    <div class="build">
+      <div class="card">
+        <svg class="grid-svg" viewBox="-10 -10 120 120" role="img" aria-label="شبكة البناء الهندسي للرمز">
+          <rect x="0" y="0" width="100" height="100" rx="14" stroke="#C9CCD3" stroke-width=".5" fill="none"/>
+          <!-- الخطوط الإرشادية تدور مع الأعمدة لتنطبق على حوافها -->
+          <g transform="rotate(-6 50 50)">
+            <g stroke="#C9CCD3" stroke-width=".5">
+              <line x1="-6" y1="10" x2="106" y2="10"/><line x1="-6" y1="26" x2="106" y2="26"/>
+              <line x1="-6" y1="42" x2="106" y2="42"/><line x1="-6" y1="80" x2="106" y2="80"/>
+              <line x1="20" y1="-6" x2="20" y2="106"/><line x1="34" y1="-6" x2="34" y2="106"/>
+              <line x1="44" y1="-6" x2="44" y2="106"/><line x1="58" y1="-6" x2="58" y2="106"/>
+              <line x1="68" y1="-6" x2="68" y2="106"/><line x1="82" y1="-6" x2="82" y2="106"/>
+            </g>
+            <g fill="currentColor" fill-opacity=".92">
+              <rect x="20" y="42" width="14" height="38" rx="6"/>
+              <rect x="44" y="26" width="14" height="54" rx="6"/>
+              <rect x="68" y="10" width="14" height="70" rx="6"/>
+            </g>
+            <g font-size="4.5" fill="#6E737C" text-anchor="middle" font-family="Manrope, sans-serif" direction="ltr">
+              <text x="27" y="90">14</text><text x="39" y="90">10</text><text x="51" y="90">14</text>
+            </g>
+          </g>
+          <text x="104" y="54" font-size="4.5" fill="#6E737C" font-family="Manrope, sans-serif" direction="ltr" unicode-bidi="plaintext">-6°</text>
+        </svg>
+      </div>
+      <div class="card">
+        <div class="scale">
+          <div><span>48px</span><div class="t" style="width:48px;height:48px"><svg class="mark" width="36" height="36" aria-hidden="true"><use href="#sy-mark"/></svg></div></div>
+          <div><span>24px</span><svg class="mark" width="24" height="24" aria-hidden="true"><use href="#sy-mark"/></svg></div>
+          <div><span>16px</span><svg class="mark" width="16" height="16" aria-hidden="true"><use href="#sy-mark"/></svg></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>سيّار — دليل الشعار</footer>
+</main>
+</body>
+</html>

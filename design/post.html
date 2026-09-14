@@ -1,0 +1,300 @@
+<!doctype html>
+<html lang="ar" dir="rtl" data-cur="usd">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>نشر إعلان جديد — سيّار</title>
+<meta name="theme-color" content="#17213D">
+<link rel="icon" href="../brand/sayyar-app-icon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600&family=Manrope:wght@600;800&family=Noto+Kufi+Arabic:wght@700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css?v=20260915c">
+</head>
+<body class="post-page">
+
+<header class="site-header">
+  <div class="container hdr">
+    <a href="index.html?v=20260915c" class="logo" aria-label="سيّار — الرئيسية">
+      <span class="logo-word" aria-hidden="true">سيّار</span>
+      <svg class="logo-mark" aria-hidden="true"><use href="icons.svg#mark"/></svg>
+    </a>
+    <div class="hdr-actions">
+      <span class="saved"><svg class="i"><use href="icons.svg#check"/></svg>حُفظت المسودة</span>
+      <a class="btn btn-text" href="index.html?v=20260915c">إلغاء</a>
+    </div>
+  </div>
+</header>
+
+<main class="container">
+  <form id="post-form" class="post-wrap" novalidate>
+
+    <div class="post-top">
+      <p id="step-label" class="step-label" aria-live="polite">الخطوة 1 من 6 — الفئة</p>
+    </div>
+    <ol class="stepper" aria-label="خطوات نشر الإعلان">
+      <li aria-current="step"><span>الفئة</span></li>
+      <li><span>المواصفات</span></li>
+      <li><span>الصور</span></li>
+      <li><span>السعر والموقع</span></li>
+      <li><span>المعاينة</span></li>
+      <li hidden><span>تم</span></li>
+    </ol>
+
+    <!-- 1. الفئة -->
+    <section class="step active" aria-labelledby="s1-h">
+      <h1 id="s1-h" tabindex="-1">ماذا تريد أن تبيع؟</h1>
+      <p class="sub">اختر الفئة لنعرض لك الحقول المناسبة.</p>
+      <div class="limit"><svg class="i"><use href="icons.svg#info"/></svg><span>لديك <b class="num">2</b> من <b class="num">3</b> إعلانات نشطة مجاناً.</span></div>
+
+      <fieldset style="margin-top:22px">
+        <legend class="sr-only">الفئة الرئيسية</legend>
+        <div class="types">
+          <label class="type"><input type="radio" name="type" value="car" checked><span><span class="ic"><svg class="i"><use href="icons.svg#car"/></svg></span>سيارات</span></label>
+          <label class="type"><input type="radio" name="type" value="van"><span><span class="ic"><svg class="i"><use href="icons.svg#van"/></svg></span>فانات ونقل خفيف</span></label>
+          <label class="type"><input type="radio" name="type" value="moto"><span><span class="ic"><svg class="i"><use href="icons.svg#moto"/></svg></span>موتسكلات</span></label>
+          <label class="type"><input type="radio" name="type" disabled><span><span class="ic"><svg class="i"><use href="icons.svg#truck"/></svg></span>شاحنات<small>قريباً</small></span></label>
+        </div>
+      </fieldset>
+
+      <fieldset style="margin-top:22px">
+        <legend>نوع السيارة</legend>
+        <div class="chips">
+          <label class="chip"><input type="radio" name="sub" checked><span>سيدان</span></label>
+          <label class="chip"><input type="radio" name="sub"><span>دفع رباعي</span></label>
+          <label class="chip"><input type="radio" name="sub"><span>هاتشباك</span></label>
+          <label class="chip"><input type="radio" name="sub"><span>كوبيه</span></label>
+        </div>
+      </fieldset>
+    </section>
+
+    <!-- 2. المواصفات -->
+    <section class="step" aria-labelledby="s2-h">
+      <h1 id="s2-h" tabindex="-1">مواصفات السيارة</h1>
+      <p class="sub">المعلومات الدقيقة تجلب مشترين جادّين. الحقول المعلّمة بـ <span class="req">*</span> مطلوبة.</p>
+
+      <div class="form-grid">
+        <div class="field" data-required>
+          <label class="label" for="brand">الماركة <span class="req">*</span></label>
+          <select class="select" id="brand" aria-describedby="brand-err" data-fill="brands" data-by="type"><option value="">اختر الماركة</option></select>
+          <p class="err" id="brand-err"><svg class="i i-sm"><use href="icons.svg#info"/></svg>اختر ماركة السيارة للمتابعة.</p>
+        </div>
+        <div class="field" data-required>
+          <label class="label" for="model">الموديل <span class="req">*</span></label>
+          <input class="input" id="model" placeholder="مثلاً: ريو" aria-describedby="model-err">
+          <p class="err" id="model-err"><svg class="i i-sm"><use href="icons.svg#info"/></svg>اكتب اسم الموديل.</p>
+        </div>
+        <div class="field" data-required>
+          <label class="label" for="year">سنة الصنع <span class="req">*</span></label>
+          <select class="select" id="year" aria-describedby="year-err" data-fill="years"><option value="">اختر السنة</option><option>2026</option><option>2025</option><option>2024</option><option>2023</option><option>2022</option><option>2021</option><option>2020</option><option>2019</option><option>2018</option><option>2017</option><option>2016</option><option>2015</option><option>2014</option><option>2013</option><option>2012</option><option>2011</option><option>2010</option><option>2009</option><option>2008</option><option>2007</option><option>2006</option><option>2005</option><option>2004</option><option>2003</option><option>2002</option><option>2001</option><option>2000</option><option>1999</option><option>1998</option><option>1997</option><option>1996</option><option>1995</option><option>1994</option><option>1993</option><option>1992</option><option>1991</option><option>1990</option></select>
+          <p class="err" id="year-err"><svg class="i i-sm"><use href="icons.svg#info"/></svg>اختر سنة الصنع.</p>
+        </div>
+        <div class="field">
+          <label class="label" for="km">الممشى</label>
+          <div class="affix"><input class="input num" id="km" inputmode="numeric" placeholder="185,000"><span class="unit">كم</span></div>
+        </div>
+
+        <fieldset class="span-2">
+          <legend>الحالة <span class="req">*</span></legend>
+          <div class="chips">
+            <label class="chip"><input type="radio" name="cond" checked><span>مستعملة</span></label>
+            <label class="chip"><input type="radio" name="cond"><span>جديدة</span></label>
+            <label class="chip"><input type="radio" name="cond"><span>بحاجة إصلاح</span></label>
+            <label class="chip"><input type="radio" name="cond"><span>حادث</span></label>
+          </div>
+        </fieldset>
+
+        <fieldset class="field span-2" data-required-radio aria-describedby="body-help body-err">
+          <legend>سلامة الهيكل <span class="req">*</span></legend>
+          <div class="chips">
+            <label class="chip"><input type="radio" name="body" value="clean"><span><svg class="i i-sm" aria-hidden="true"><use href="icons.svg#check"/></svg>كاملة، خالية من الحوادث</span></label>
+            <label class="chip"><input type="radio" name="body" value="cut"><span>قصة</span></label>
+          </div>
+          <p class="help" id="body-help">«قصة» تعني أن الهيكل مقصوص وملحوم من أجزاء سيارات أخرى. الإفصاح عنها إلزامي ويحمي البائع والمشتري.</p>
+          <p class="err" id="body-err"><svg class="i i-sm"><use href="icons.svg#info"/></svg>حدّد إن كانت السيارة كاملة أو قصة.</p>
+        </fieldset>
+
+        <fieldset>
+          <legend>نوع الوقود</legend>
+          <div class="chips">
+            <label class="chip"><input type="checkbox" checked><span>بنزين</span></label>
+            <label class="chip"><input type="checkbox"><span>مازوت</span></label>
+            <label class="chip"><input type="checkbox"><span>غاز</span></label>
+            <label class="chip"><input type="checkbox"><span>هجين</span></label>
+            <label class="chip"><input type="checkbox"><span>كهرباء</span></label>
+          </div>
+        </fieldset>
+        <fieldset>
+          <legend>ناقل الحركة</legend>
+          <div class="chips">
+            <label class="chip"><input type="radio" name="gear" checked><span>عادي</span></label>
+            <label class="chip"><input type="radio" name="gear"><span>أوتوماتيك</span></label>
+          </div>
+        </fieldset>
+
+        <div class="field">
+          <label class="label" for="engine">سعة المحرك <span class="opt">(اختياري)</span></label>
+          <div class="affix"><input class="input num" id="engine" inputmode="numeric" placeholder="1400"><span class="unit">cc</span></div>
+        </div>
+        <div class="field">
+          <label class="label" for="color">اللون <span class="opt">(اختياري)</span></label>
+          <input class="input" id="color" placeholder="مثلاً: فضي">
+        </div>
+
+        <div class="field">
+          <label class="label" for="plate">وضع الترقيم</label>
+          <select class="select" id="plate"><option>مرقمة سورية</option><option>رقم مؤقت</option><option>ترانزيت</option><option>غير مرقمة</option></select>
+        </div>
+        <div class="field">
+          <label class="label" for="papers">الأوراق</label>
+          <select class="select" id="papers"><option>أوراق كاملة</option><option>أوراق ناقصة</option><option>بدون أوراق</option></select>
+        </div>
+        <div class="field">
+          <label class="label" for="customs">الجمارك</label>
+          <select class="select" id="customs"><option>مفرزة</option><option>غير مفرزة</option><option>دخول مؤقت</option><option>مستوردة حديثاً</option></select>
+        </div>
+        <fieldset>
+          <legend>مركّب عليها <span class="opt">(اختياري)</span></legend>
+          <div class="chips">
+            <label class="chip"><input type="checkbox"><span>جهاز غاز</span></label>
+            <label class="chip"><input type="checkbox"><span>أنفرتر</span></label>
+            <label class="chip"><input type="checkbox"><span>بطارية إضافية</span></label>
+          </div>
+        </fieldset>
+
+        <div class="field span-2" data-required>
+          <label class="label" for="title">عنوان الإعلان <span class="req">*</span></label>
+          <input class="input" id="title" maxlength="70" placeholder="مثلاً: كيا ريو 2012، مركّب عليها جهاز غاز" aria-describedby="title-help title-err">
+          <p class="help" id="title-help">عنوان قصير وواضح، حتى 70 حرفاً.</p>
+          <p class="err" id="title-err"><svg class="i i-sm"><use href="icons.svg#info"/></svg>اكتب عنواناً للإعلان.</p>
+        </div>
+        <div class="field span-2">
+          <label class="label" for="desc">الوصف</label>
+          <textarea class="textarea" id="desc" placeholder="اذكر حالة المحرك، الصيانة، الحوادث إن وُجدت، وأي تفاصيل تهم المشتري."></textarea>
+          <p class="help">لا تكتب رقم هاتفك هنا — سيظهر في زر التواصل.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. الصور -->
+    <section class="step" aria-labelledby="s3-h">
+      <h1 id="s3-h" tabindex="-1">أضف صور السيارة</h1>
+      <p class="sub">الإعلانات بصور واضحة تحصل على مشاهدات أكثر بكثير. الصورة الأولى هي صورة الغلاف.</p>
+
+      <label class="dropzone" style="margin-top:22px">
+        <input id="photos" type="file" accept="image/*" multiple>
+        <span class="ic"><svg class="i i-lg"><use href="icons.svg#upload"/></svg></span>
+        <b>اختر الصور من جهازك</b>
+        <span class="help">حتى 12 صورة · تُضغط تلقائياً لتوفير الباقة</span>
+      </label>
+
+      <ul class="uploads" id="uploads">
+        <li class="up"><div class="ph t5"><svg viewBox="0 0 200 100" aria-hidden="true"><use href="icons.svg#v-sedan"/></svg></div><span class="badge badge-feat main-tag">الغلاف</span><button type="button" class="rm" aria-label="حذف الصورة"><svg class="i i-sm"><use href="icons.svg#x"/></svg></button></li>
+        <li class="up"><div class="ph t1"><svg viewBox="0 0 200 100" aria-hidden="true"><use href="icons.svg#v-sedan"/></svg></div><button type="button" class="rm" aria-label="حذف الصورة"><svg class="i i-sm"><use href="icons.svg#x"/></svg></button></li>
+        <li class="up"><div class="ph t2"><svg viewBox="0 0 200 100" aria-hidden="true"><use href="icons.svg#v-sedan"/></svg></div><span class="bar" role="progressbar" aria-label="جارٍ الرفع" aria-valuenow="62" aria-valuemin="0" aria-valuemax="100"><i></i></span></li>
+      </ul>
+      <p class="help" style="margin-top:10px">نصيحة: صوّر من الأمام والخلف والجانبين، والداخل، والعدّاد، وحجرة المحرك.</p>
+    </section>
+
+    <!-- 4. السعر والموقع -->
+    <section class="step" aria-labelledby="s4-h">
+      <h1 id="s4-h" tabindex="-1">السعر ومكان السيارة</h1>
+      <p class="sub">أدخل السعر بالدولار، ونعرض للمشتري ما يعادله بالليرة تلقائياً.</p>
+
+      <div class="form-grid">
+        <div class="field span-2" data-required>
+          <label class="label" for="price-usd">السعر بالدولار <span class="req">*</span></label>
+          <div class="affix"><input class="input num" id="price-usd" inputmode="decimal" placeholder="6,500" aria-describedby="price-eq price-err" style="font-size:20px;font-weight:600"><span class="unit">$</span></div>
+          <p class="equiv" id="price-eq">يُحسب المعادل بالليرة تلقائياً</p>
+          <p class="err" id="price-err"><svg class="i i-sm"><use href="icons.svg#info"/></svg>أدخل سعر السيارة بالدولار.</p>
+        </div>
+        <div class="field">
+          <label class="label" for="gov">المحافظة <span class="req">*</span></label>
+          <select class="select" id="gov" data-fill="govs" data-selected="دمشق"><option value="">اختر المحافظة</option></select>
+        </div>
+        <div class="field">
+          <label class="label" for="area">المنطقة</label>
+          <input class="input" id="area" placeholder="مثلاً: المزة">
+        </div>
+        <div class="field">
+          <label class="label" for="phone">رقم الموبايل <span class="req">*</span></label>
+          <input class="input num" id="phone" type="tel" inputmode="tel" autocomplete="tel" dir="ltr" style="text-align:right" value="0933 000 000">
+        </div>
+        <div class="field">
+          <label class="label" for="whatsapp">رقم الواتساب</label>
+          <input class="input num" id="whatsapp" type="tel" inputmode="tel" dir="ltr" style="text-align:right">
+          <label class="check"><input type="checkbox" id="wa-same" checked>نفس رقم الموبايل</label>
+        </div>
+
+        <!-- حماية من الروبوتات بدون خدمات خارجية -->
+        <div class="hp" aria-hidden="true"><label for="website">اترك هذا الحقل فارغاً</label><input id="website" tabindex="-1" autocomplete="off"></div>
+        <div class="field span-2">
+          <label class="label" for="captcha">سؤال التحقق <span class="req">*</span></label>
+          <div class="captcha"><span class="q" aria-hidden="true">4 + 3 =</span><input class="input num" id="captcha" inputmode="numeric" aria-describedby="captcha-help"></div>
+          <p class="help" id="captcha-help">كم ناتج جمع أربعة وثلاثة؟</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. المعاينة -->
+    <section class="step" aria-labelledby="s5-h">
+      <h1 id="s5-h" tabindex="-1">راجع إعلانك قبل النشر</h1>
+      <p class="sub">هكذا سيظهر إعلانك للمشترين.</p>
+
+      <div class="preview">
+        <article class="lcard">
+          <div class="media"><div class="ph t5"><svg viewBox="0 0 200 100" aria-hidden="true"><use href="icons.svg#v-sedan"/></svg></div></div>
+          <div class="body">
+            <h3>كيا ريو 2012، مركّب عليها جهاز غاز</h3>
+            <p class="price"><span class="p-usd"><bdi>$6,500</bdi></span><span class="p-syp">84.5 مليون ل.س</span></p>
+            <p class="meta"><span>2012</span><span>185,000 كم</span><span>عادي</span></p>
+            <p class="loc"><svg class="i"><use href="icons.svg#pin"/></svg>دمشق، المزة · الآن</p>
+          </div>
+        </article>
+
+        <div class="panel summary">
+          <dl class="specs">
+            <div><dt>الفئة</dt><dd>سيارات · سيدان <a class="edit-link" href="#" data-goto="0">تعديل</a></dd></div>
+            <div><dt>الماركة والموديل</dt><dd>كيا ريو 2012 <a class="edit-link" href="#" data-goto="1">تعديل</a></dd></div>
+            <div><dt>سلامة الهيكل</dt><dd class="ok"><svg class="i"><use href="icons.svg#check"/></svg>كاملة، خالية من الحوادث <a class="edit-link" href="#" data-goto="1">تعديل</a></dd></div>
+            <div><dt>الأوراق والجمارك</dt><dd>كاملة · مفرزة <a class="edit-link" href="#" data-goto="1">تعديل</a></dd></div>
+            <div><dt>الصور</dt><dd><span class="num">8</span> صور <a class="edit-link" href="#" data-goto="2">تعديل</a></dd></div>
+            <div><dt>السعر</dt><dd class="num">$6,500 <a class="edit-link" href="#" data-goto="3">تعديل</a></dd></div>
+            <div><dt>التواصل</dt><dd class="num" dir="ltr">0933 000 000</dd></div>
+          </dl>
+        </div>
+      </div>
+
+      <label class="check" style="margin-top:18px"><input type="checkbox" checked>أوافق على <a href="terms.html?v=20260915c" target="_blank" rel="noopener" style="text-decoration:underline;text-underline-offset:3px">شروط الاستخدام</a> وأقرّ بأن المعلومات صحيحة.</label>
+    </section>
+
+    <!-- 6. تم -->
+    <section class="step" aria-labelledby="s6-h">
+      <div class="success">
+        <div class="ic"><svg class="i"><use href="icons.svg#check"/></svg></div>
+        <h1 id="s6-h" tabindex="-1">وصلنا إعلانك!</h1>
+        <p>إعلانك الآن قيد المراجعة، وسيظهر للمشترين خلال ساعات قليلة. سنرسل لك إشعاراً عند نشره.</p>
+        <ol class="timeline">
+          <li class="done"><span><b>أُرسل الإعلان</b>الآن</span></li>
+          <li class="now"><span><b>قيد المراجعة</b>نتأكد من الصور والمعلومات</span></li>
+          <li><span><b>النشر</b>يبقى الإعلان ظاهراً لمدة 30 يوماً</span></li>
+        </ol>
+        <div class="row">
+          <a class="btn btn-primary" href="account.html?v=20260915c">إعلاناتي</a>
+          <a class="btn btn-ghost" href="index.html?v=20260915c">العودة للرئيسية</a>
+        </div>
+      </div>
+    </section>
+
+    <div class="post-nav">
+      <button class="btn btn-ghost" id="prev" type="button" hidden><svg class="i"><use href="icons.svg#chev-right"/></svg>السابق</button>
+      <span></span>
+      <button class="btn btn-primary btn-lg" id="next" type="button">التالي</button>
+    </div>
+  </form>
+</main>
+
+<script src="data.js?v=20260915c" defer></script>
+<script src="app.js?v=20260915c" defer></script>
+</body>
+</html>

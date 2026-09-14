@@ -1,0 +1,277 @@
+<!doctype html>
+<html lang="ar" dir="rtl" data-cur="usd">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>حسابي — سيّار</title>
+<meta name="theme-color" content="#17213D">
+<meta name="robots" content="noindex">
+<link rel="icon" href="../brand/sayyar-app-icon.svg" type="image/svg+xml">
+<script>try{var c=localStorage.getItem('sy-cur');if(c)document.documentElement.setAttribute('data-cur',c)}catch(e){}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600&family=Manrope:wght@600;800&family=Noto+Kufi+Arabic:wght@700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css?v=20260915c">
+</head>
+<body>
+<a class="skip" href="#main">تخطَّ إلى المحتوى</a>
+
+<header class="site-header">
+  <div class="container hdr">
+    <a href="index.html?v=20260915c" class="logo" aria-label="سيّار — الرئيسية">
+      <span class="logo-word" aria-hidden="true">سيّار</span>
+      <svg class="logo-mark" aria-hidden="true"><use href="icons.svg#mark"/></svg>
+    </a>
+    <nav class="hdr-nav" aria-label="القائمة الرئيسية">
+      <a href="search.html?v=20260915c">تصفح الآليات</a>
+      <a href="dealers.html?v=20260915c">المعارض</a>
+      <a href="plans.html?v=20260915c">باقات المعارض</a>
+    </nav>
+    <div class="hdr-actions">
+      <div class="cur" role="group" aria-label="عملة عرض الأسعار">
+        <button type="button" data-cur="usd" aria-pressed="true">$</button>
+        <button type="button" data-cur="syp" aria-pressed="false">ل.س</button>
+      </div>
+      <a class="btn btn-primary hide-sm" href="post.html?v=20260915c"><svg class="i"><use href="icons.svg#plus"/></svg>أضف إعلان</a>
+    </div>
+  </div>
+</header>
+
+<main id="main" class="container shell">
+  <aside class="side">
+    <div class="side-user"><span class="avatar">أ</span><div><b>أحمد خليل</b><small>حساب فرد · دمشق</small></div></div>
+    <div class="side-nav" role="tablist" aria-label="أقسام الحساب" aria-orientation="vertical" data-tabs data-hash>
+      <button type="button" role="tab" id="t-myads" aria-controls="myads" aria-selected="true"><svg class="i"><use href="icons.svg#list"/></svg>إعلاناتي</button>
+      <button type="button" role="tab" id="t-fav" aria-controls="favorites" aria-selected="false"><svg class="i"><use href="icons.svg#heart"/></svg>المفضلة</button>
+      <button type="button" role="tab" id="t-profile" aria-controls="profile" aria-selected="false"><svg class="i"><use href="icons.svg#user"/></svg>الملف الشخصي</button>
+    </div>
+    <span class="side-sep"></span>
+    <nav class="side-nav hide-sm" aria-label="روابط الحساب">
+      <a class="side-link" href="plans.html?v=20260915c"><svg class="i"><use href="icons.svg#store"/></svg>تحويل الحساب إلى معرض</a>
+      <a class="side-link" href="index.html?v=20260915c"><svg class="i"><use href="icons.svg#logout"/></svg>تسجيل الخروج</a>
+    </nav>
+  </aside>
+
+  <div>
+    <!-- إعلاناتي -->
+    <section id="myads" role="tabpanel" aria-labelledby="t-myads">
+      <div class="pane-head">
+        <h1>إعلاناتي</h1>
+        <a class="btn btn-primary" href="post.html?v=20260915c"><svg class="i"><use href="icons.svg#plus"/></svg>أضف إعلان</a>
+      </div>
+
+      <div class="panel" style="margin-bottom:16px">
+        <div class="meter-row"><span>الإعلانات النشطة</span><b class="num">2 من 3</b></div>
+        <div class="meter" role="progressbar" aria-label="الإعلانات النشطة" aria-valuenow="2" aria-valuemin="0" aria-valuemax="3"><i style="width:66%"></i></div>
+        <p class="help" style="margin-top:8px">يبقى كل إعلان ظاهراً 30 يوماً. تحتاج أكثر؟ <a class="link" href="plans.html?v=20260915c">اشترك كمعرض</a></p>
+      </div>
+
+      <div class="chips" role="radiogroup" aria-label="فلترة حسب الحالة" data-filter="#mylist" style="margin-bottom:14px">
+        <label class="chip"><input type="radio" name="st" value="all" checked><span>الكل <span class="num">6</span></span></label>
+        <label class="chip"><input type="radio" name="st" value="active"><span>نشط <span class="num">2</span></span></label>
+        <label class="chip"><input type="radio" name="st" value="pending"><span>قيد المراجعة <span class="num">1</span></span></label>
+        <label class="chip"><input type="radio" name="st" value="sold"><span>مباع <span class="num">1</span></span></label>
+        <label class="chip"><input type="radio" name="st" value="rejected"><span>مرفوض <span class="num">1</span></span></label>
+        <label class="chip"><input type="radio" name="st" value="expired"><span>منتهي <span class="num">1</span></span></label>
+      </div>
+
+      <div class="mylist" id="mylist">
+        <article class="my" data-status="active" data-row>
+          <div class="ph t5"><svg viewBox="0 0 200 100" aria-hidden="true"><use href="icons.svg#v-sedan"/></svg></div>
+          <div class="info">
+            <div class="top"><h3><a href="listing.html?v=20260915c">كيا ريو 2012، مركّب عليها جهاز غاز</a></h3><span class="st st-active">نشط</span></div>
+            <p class="price"><span class="p-usd"><bdi>$6,500</bdi></span><span class="p-syp">84.5 مليون ل.س</span></p>
+            <p class="line"><span><svg class="i"><use href="icons.svg#eye"/></svg><span class="num">214</span> مشاهدة</span><span><svg class="i"><use href="icons.svg#chat"/></svg><span class="num">12</span> تواصل</span><span><svg class="i"><use href="icons.svg#clock"/></svg>ينتهي بعد 26 يوماً</span></p>
+          </div>
+          <div class="acts">
+            <a class="btn btn-ghost" href="post.html?v=20260915c"><svg class="i"><use href="icons.svg#edit"/></svg>تعديل</a>
+            <button class="btn btn-ghost" type="button" data-set-status="sold"><svg class="i"><use href="icons.svg#tag"/></svg>تم البيع</button>
+            <button class="btn btn-danger-text" type="button" data-dialog="del"><svg class="i"><use href="icons.svg#trash"/></svg>حذف</button>
+          </div>
+        </article>
+
+        <article class="my" data-status="active" data-row>
+          <div class="ph t6"><svg viewBox="0 0 200 100" aria-hidden="true"><use href="icons.svg#v-moto"/></svg></div>
+          <div class="info">
+            <div class="top"><h3><a href="listing.html?v=20260915c">هوندا CG 125 موديل 2019، أوراق كاملة</a></h3><span class="st st-active">نشط</span></div>
+            <p class="price"><span class="p-usd"><bdi>$950</bdi></span><span class="p-syp">12.4 مليون ل.س</span></p>
+            <p class="line"><span><svg class="i"><use href="icons.svg#eye"/></svg><span class="num">58</span> مشاهدة</span><span><svg class="i"><use href="icons.svg#chat"/></svg><span class="num">3</span> تواصل</span><span><svg class="i"><use href="icons.svg#clock"/></svg>ينتهي بعد 9 أيام</span></p>
+          </div>
+          <div class="acts">
+            <a class="btn btn-ghost" href="post.html?v=20260915c"><svg class="i"><use href="icons.svg#edit"/></svg>تعديل</a>
+            <button class="btn btn-ghost" type="button" data-set-status="sold"><svg class="i"><use href="icons.svg#tag"/></svg>تم البيع</button>
+            <button class="btn btn-danger-text" type="button" data-dialog="del"><svg class="i"><use href="icons.svg#trash"/></svg>حذف</button>
+          </div>
+        </article>
+
+        <article class="my" data-status="pending" data-row>
+          <div class="ph t4"><svg viewBox="0 0 200 100" aria-hidden="true"><use href="icons.svg#v-van"/></svg></div>
+          <div class="info">
+            <div class="top"><h3>هيونداي H100 فان ركاب 2010</h3><span class="st st-pending">قيد المراجعة</span></div>
+            <p class="price"><span class="p-usd"><bdi>$8,700</bdi></span><span class="p-syp">113.1 مليون ل.س</span></p>
+            <p class="line"><span><svg class="i"><use href="icons.svg#clock"/></svg>أُرسل منذ ساعتين · المراجعة عادةً خلال ساعات</span></p>
+          </div>
+          <div class="acts">
+            <a class="btn btn-ghost" href="post.html?v=20260915c"><svg class="i"><use href="icons.svg#edit"/></svg>تعديل</a>
+            <button class="btn btn-danger-text" type="button" data-dialog="del"><svg class="i"><use href="icons.svg#trash"/></svg>حذف</button>
+          </div>
+        </article>
+
+        <article class="my" data-status="sold" data-row>
+          <div class="ph t2"><svg viewBox="0 0 200 100" aria-hidden="true"><use href="icons.svg#v-sedan"/></svg></div>
+          <div class="info">
+            <div class="top"><h3>بيجو 206 موديل 2007</h3><span class="st st-sold">مباع</span></div>
+            <p class="price"><span class="p-usd"><bdi>$3,900</bdi></span><span class="p-syp">50.7 مليون ل.س</span></p>
+            <p class="line"><span><svg class="i"><use href="icons.svg#check"/></svg>بيع في 2 أيلول · <span class="num">431</span> مشاهدة</span></p>
+          </div>
+          <div class="acts">
+            <button class="btn btn-danger-text" type="button" data-dialog="del"><svg class="i"><use href="icons.svg#trash"/></svg>حذف</button>
+          </div>
+        </article>
+
+        <article class="my" data-status="rejected" data-row>
+          <div class="ph t1"><svg viewBox="0 0 200 100" aria-hidden="true"><use href="icons.svg#v-sedan"/></svg></div>
+          <div class="info">
+            <div class="top"><h3>مرسيدس C180 موديل 2004</h3><span class="st st-rejected">مرفوض</span></div>
+            <p class="price"><span class="p-usd"><bdi>$7,800</bdi></span><span class="p-syp">101.4 مليون ل.س</span></p>
+          </div>
+          <div class="alert alert-danger"><svg class="i"><use href="icons.svg#info"/></svg><span><b>سبب الرفض:</b> الصور غير واضحة أو لا تخص الآلية المعلن عنها. عدّل الصور وأعد الإرسال.</span></div>
+          <div class="acts">
+            <a class="btn btn-primary" href="post.html?v=20260915c"><svg class="i"><use href="icons.svg#edit"/></svg>تعديل وإعادة الإرسال</a>
+            <button class="btn btn-danger-text" type="button" data-dialog="del"><svg class="i"><use href="icons.svg#trash"/></svg>حذف</button>
+          </div>
+        </article>
+
+        <article class="my" data-status="expired" data-row>
+          <div class="ph t3"><svg viewBox="0 0 200 100" aria-hidden="true"><use href="icons.svg#v-van"/></svg></div>
+          <div class="info">
+            <div class="top"><h3>سوزوكي كاري فان بضائع 2015</h3><span class="st st-expired">منتهي</span></div>
+            <p class="price"><span class="p-usd"><bdi>$5,800</bdi></span><span class="p-syp">75.4 مليون ل.س</span></p>
+            <p class="line"><span><svg class="i"><use href="icons.svg#clock"/></svg>انتهى في 28 آب</span></p>
+          </div>
+          <div class="acts">
+            <button class="btn btn-primary" type="button" data-toast-click="أُعيد نشر الإعلان لمدة 30 يوماً"><svg class="i"><use href="icons.svg#refresh"/></svg>تجديد 30 يوماً</button>
+            <button class="btn btn-danger-text" type="button" data-dialog="del"><svg class="i"><use href="icons.svg#trash"/></svg>حذف</button>
+          </div>
+        </article>
+      </div>
+
+      <div class="empty" data-empty="mylist" hidden>
+        <div class="ic"><svg class="i i-lg"><use href="icons.svg#list"/></svg></div>
+        <h2>لا توجد إعلانات هنا</h2>
+        <p>لا يوجد لديك إعلانات بهذه الحالة. انشر إعلانك الأول خلال دقائق.</p>
+        <div class="row"><a class="btn btn-primary" href="post.html?v=20260915c">أضف إعلان</a></div>
+      </div>
+    </section>
+
+    <!-- المفضلة -->
+    <section id="favorites" role="tabpanel" aria-labelledby="t-fav" hidden>
+      <div class="pane-head"><h1>المفضلة</h1><span class="count"><span class="num">3</span> إعلانات محفوظة</span></div>
+      <div class="cards">
+        <article class="lcard">
+          <div class="media"><div class="ph t2"><svg viewBox="0 0 200 100" aria-hidden="true"><use href="icons.svg#v-sedan"/></svg></div>
+            <button class="fav" type="button" aria-pressed="true" aria-label="إزالة من المفضلة"><svg class="i"><use href="icons.svg#heart"/></svg></button></div>
+          <div class="body">
+            <h3><a href="listing.html?v=20260915c">كيا سيراتو 2014 فل كامل، فحص نظيف</a></h3>
+            <p class="price"><span class="p-usd"><bdi>$9,300</bdi></span><span class="p-syp">120.9 مليون ل.س</span></p>
+            <p class="meta"><span>2014</span><span>132,000 كم</span></p>
+            <p class="loc"><svg class="i"><use href="icons.svg#pin"/></svg>ريف دمشق · منذ 6 ساعات</p>
+          </div>
+        </article>
+        <article class="lcard">
+          <div class="media"><div class="ph t3"><svg viewBox="0 0 200 100" aria-hidden="true"><use href="icons.svg#v-pickup"/></svg></div>
+            <button class="fav" type="button" aria-pressed="true" aria-label="إزالة من المفضلة"><svg class="i"><use href="icons.svg#heart"/></svg></button></div>
+          <div class="body">
+            <h3><a href="listing.html?v=20260915c">تويوتا هايلوكس بيك أب 2008</a></h3>
+            <p class="price"><span class="p-usd"><bdi>$14,500</bdi></span><span class="p-syp">188.5 مليون ل.س</span></p>
+            <p class="meta"><span>2008</span><span>240,000 كم</span></p>
+            <p class="loc"><svg class="i"><use href="icons.svg#pin"/></svg>حمص · منذ 4 ساعات</p>
+          </div>
+        </article>
+        <article class="lcard">
+          <div class="media"><div class="ph t5"><svg viewBox="0 0 200 100" aria-hidden="true"><use href="icons.svg#v-moto"/></svg></div>
+            <div class="badges"><span class="st st-sold">مباع</span></div>
+            <button class="fav" type="button" aria-pressed="true" aria-label="إزالة من المفضلة"><svg class="i"><use href="icons.svg#heart"/></svg></button></div>
+          <div class="body">
+            <h3><a href="listing.html?v=20260915c">ياماها YBR 2020 نظيف جداً</a></h3>
+            <p class="price"><span class="p-usd"><bdi>$1,400</bdi></span><span class="p-syp">18.2 مليون ل.س</span></p>
+            <p class="meta"><span>2020</span><span>15,000 كم</span></p>
+            <p class="loc"><svg class="i"><use href="icons.svg#pin"/></svg>إدلب · أمس</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- الملف الشخصي -->
+    <section id="profile" role="tabpanel" aria-labelledby="t-profile" hidden>
+      <div class="pane-head"><h1>الملف الشخصي</h1><span class="count">عضو منذ كانون الثاني 2026</span></div>
+      <div class="stack">
+        <form class="panel" novalidate data-toast-submit="حُفظت التغييرات">
+          <h2>معلوماتك</h2>
+          <div class="form-grid" style="margin-top:4px">
+            <div class="field"><label class="label" for="p-name">الاسم الكامل</label><input class="input" id="p-name" autocomplete="name" value="أحمد خليل"></div>
+            <div class="field"><label class="label" for="p-city">المحافظة</label><select class="select" id="p-city" data-fill="govs" data-selected="دمشق"></select></div>
+            <div class="field">
+              <label class="label" for="p-phone">رقم الموبايل</label>
+              <input class="input num" id="p-phone" type="tel" dir="ltr" style="text-align:right" value="0933 000 000" disabled aria-describedby="p-phone-help">
+              <p class="help" id="p-phone-help">لتغيير الرقم تواصل معنا.</p>
+            </div>
+            <div class="field"><label class="label" for="p-wa">رقم الواتساب</label><input class="input num" id="p-wa" type="tel" inputmode="tel" dir="ltr" style="text-align:right" value="0933 000 000"></div>
+            <div class="field span-2">
+              <span class="label">نوع الحساب</span>
+              <div class="row-between" style="padding:12px 14px;background:var(--gray);border-radius:var(--r)"><span>فرد — حتى 3 إعلانات نشطة</span><a class="link" href="plans.html?v=20260915c">التحويل إلى معرض</a></div>
+            </div>
+          </div>
+          <button class="btn btn-primary" type="submit" style="margin-top:18px">حفظ التغييرات</button>
+        </form>
+
+        <form class="panel" novalidate data-toast-submit="تم تغيير كلمة المرور">
+          <h2>كلمة المرور</h2>
+          <div class="form-grid" style="margin-top:4px">
+            <div class="field"><label class="label" for="p-old">كلمة المرور الحالية</label><div class="pass"><input class="input" id="p-old" type="password" autocomplete="current-password"><button type="button" data-toggle-pass aria-pressed="false" aria-label="إظهار كلمة المرور"><svg class="i"><use href="icons.svg#eye"/></svg></button></div></div>
+            <div class="field"><label class="label" for="p-new">كلمة المرور الجديدة</label><div class="pass"><input class="input" id="p-new" type="password" autocomplete="new-password"><button type="button" data-toggle-pass aria-pressed="false" aria-label="إظهار كلمة المرور"><svg class="i"><use href="icons.svg#eye"/></svg></button></div></div>
+          </div>
+          <button class="btn btn-ghost" type="submit" style="margin-top:18px">تغيير كلمة المرور</button>
+        </form>
+
+        <div class="panel" style="border-color:#F2C9C4">
+          <h2 style="color:var(--danger)">حذف الحساب</h2>
+          <p class="sub" style="margin-bottom:12px">يحذف حسابك وكل إعلاناتك نهائياً. لا يمكن التراجع عن هذا الإجراء.</p>
+          <button class="btn btn-ghost" type="button" data-dialog="del-account" style="color:var(--danger);border-color:#F2C9C4">حذف حسابي</button>
+        </div>
+      </div>
+    </section>
+  </div>
+</main>
+
+<dialog class="modal" id="del" aria-labelledby="del-h">
+  <div class="m-head"><h2 id="del-h">حذف الإعلان؟</h2><button class="icon-btn" type="button" data-close-dialog aria-label="إغلاق" style="border:0"><svg class="i"><use href="icons.svg#x"/></svg></button></div>
+  <div class="m-body"><p>سيُحذف الإعلان وصوره نهائياً. إذا بعت الآلية، اختر «تم البيع» بدلاً من الحذف للاحتفاظ بسجلّك.</p></div>
+  <div class="m-foot"><button class="btn btn-text" type="button" data-close-dialog>تراجع</button><button class="btn btn-primary" type="button" data-close-dialog data-remove-pending data-toast="حُذف الإعلان" style="background:var(--danger)">حذف نهائياً</button></div>
+</dialog>
+
+<dialog class="modal" id="del-account" aria-labelledby="dela-h">
+  <div class="m-head"><h2 id="dela-h">حذف الحساب نهائياً؟</h2><button class="icon-btn" type="button" data-close-dialog aria-label="إغلاق" style="border:0"><svg class="i"><use href="icons.svg#x"/></svg></button></div>
+  <div class="m-body">
+    <p>سيُحذف حسابك و<b class="num">6</b> إعلانات. اكتب كلمة <b>حذف</b> للتأكيد.</p>
+    <div class="field" data-require-field>
+      <label class="sr-only" for="confirm-del">اكتب حذف للتأكيد</label>
+      <input class="input" id="confirm-del" autocomplete="off">
+      <p class="err"><svg class="i i-sm"><use href="icons.svg#info"/></svg>اكتب كلمة «حذف» للمتابعة.</p>
+    </div>
+  </div>
+  <div class="m-foot"><button class="btn btn-text" type="button" data-close-dialog>تراجع</button><button class="btn btn-primary" type="button" data-close-dialog data-require-value="#confirm-del=حذف" data-toast="نموذج تجريبي: لم يُحذف شيء" style="background:var(--danger)">حذف الحساب</button></div>
+</dialog>
+
+<nav class="tabbar" aria-label="التنقل السريع">
+  <a href="index.html?v=20260915c"><svg class="i"><use href="icons.svg#home"/></svg><span>الرئيسية</span></a>
+  <a href="search.html?v=20260915c"><svg class="i"><use href="icons.svg#search"/></svg><span>بحث</span></a>
+  <a href="post.html?v=20260915c" class="tab-add"><span class="dot"><svg class="i"><use href="icons.svg#plus"/></svg></span><span>أضف إعلان</span></a>
+  <a href="account.html?v=20260915c#favorites"><svg class="i"><use href="icons.svg#heart"/></svg><span>المفضلة</span></a>
+  <a href="account.html?v=20260915c" aria-current="page"><svg class="i"><use href="icons.svg#user"/></svg><span>حسابي</span></a>
+</nav>
+
+<script src="data.js?v=20260915c" defer></script>
+<script src="app.js?v=20260915c" defer></script>
+</body>
+</html>

@@ -1,0 +1,342 @@
+<!doctype html>
+<html lang="ar" dir="rtl" data-cur="usd">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>سيارات للبيع في دمشق — سيّار</title>
+<meta name="theme-color" content="#17213D">
+<link rel="icon" href="../brand/sayyar-app-icon.svg" type="image/svg+xml">
+<script>try{var c=localStorage.getItem('sy-cur');if(c)document.documentElement.setAttribute('data-cur',c)}catch(e){}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600&family=Manrope:wght@600;800&family=Noto+Kufi+Arabic:wght@700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css?v=20260915c">
+</head>
+<body>
+<a class="skip" href="#results-h">تخطَّ إلى النتائج</a>
+
+<header class="site-header">
+  <div class="container hdr">
+    <a href="index.html?v=20260915c" class="logo" aria-label="سيّار — الرئيسية">
+      <span class="logo-word" aria-hidden="true">سيّار</span>
+      <svg class="logo-mark" aria-hidden="true"><use href="icons.svg#mark"/></svg>
+    </a>
+    <nav class="hdr-nav" aria-label="القائمة الرئيسية">
+      <a href="search.html?v=20260915c" aria-current="page">تصفح الآليات</a>
+      <a href="dealers.html?v=20260915c">المعارض</a>
+      <a href="plans.html?v=20260915c">باقات المعارض</a>
+      <a href="safety.html?v=20260915c">نصائح الشراء الآمن</a>
+    </nav>
+    <div class="hdr-actions">
+      <div class="cur" role="group" aria-label="عملة عرض الأسعار">
+        <button type="button" data-cur="usd" aria-pressed="true">$</button>
+        <button type="button" data-cur="syp" aria-pressed="false">ل.س</button>
+      </div>
+      <a class="btn btn-text hide-sm" href="auth.html?v=20260915c">دخول</a>
+      <a class="btn btn-primary hide-sm" href="post.html?v=20260915c"><svg class="i"><use href="icons.svg#plus"/></svg>أضف إعلان</a>
+    </div>
+  </div>
+</header>
+
+<main class="container">
+  <div class="page-head">
+    <nav aria-label="مسار التنقل"><ol class="crumbs"><li><a href="index.html?v=20260915c">الرئيسية</a></li><li><a href="search.html?v=20260915c">سيارات</a></li><li aria-current="page">دمشق</li></ol></nav>
+  </div>
+
+  <div class="layout">
+
+    <!-- الفلاتر: عمود جانبي على الشاشات الكبيرة، ولوحة كاملة على الموبايل -->
+    <aside id="filters" class="filters" aria-labelledby="filters-h">
+      <div class="f-head">
+        <h2 id="filters-h">الفلاتر</h2>
+        <div style="display:flex;gap:4px;align-items:center">
+          <button class="btn btn-text" type="button">مسح الكل</button>
+          <button class="icon-btn f-close" type="button" data-close-filters aria-label="إغلاق الفلاتر" style="border:0"><svg class="i"><use href="icons.svg#x"/></svg></button>
+        </div>
+      </div>
+
+      <form class="f-body" action="search.html">
+        <fieldset class="f-group">
+          <legend>الفئة</legend>
+          <div class="chips">
+            <label class="chip"><input type="radio" name="cat" value="car" checked><span>سيارات</span></label>
+            <label class="chip"><input type="radio" name="cat" value="van"><span>فانات</span></label>
+            <label class="chip"><input type="radio" name="cat" value="moto"><span>موتسكلات</span></label>
+          </div>
+          <div class="chips" style="margin-top:8px">
+            <label class="chip"><input type="checkbox"><span>سيدان</span></label>
+            <label class="chip"><input type="checkbox"><span>دفع رباعي</span></label>
+            <label class="chip"><input type="checkbox"><span>هاتشباك</span></label>
+            <label class="chip"><input type="checkbox"><span>كوبيه</span></label>
+          </div>
+        </fieldset>
+
+        <div class="f-group" style="display:grid;gap:12px">
+          <div class="field">
+            <label class="label" for="f-city">المحافظة</label>
+            <select class="select" id="f-city" data-fill="govs" data-selected="دمشق"><option value="">كل المحافظات</option></select>
+          </div>
+          <div class="field">
+            <label class="label" for="f-brand">الماركة</label>
+            <select class="select" id="f-brand" data-fill="brands" data-by="cat"><option value="">كل الماركات</option></select>
+          </div>
+          <div class="field">
+            <label class="label" for="f-model">الموديل</label>
+            <select class="select" id="f-model" disabled><option>اختر الماركة أولاً</option></select>
+          </div>
+        </div>
+
+        <fieldset class="f-group">
+          <legend>السعر بالدولار</legend>
+          <div class="range">
+            <div class="affix"><label class="sr-only" for="p-min">السعر من</label><input class="input num" id="p-min" inputmode="numeric" placeholder="من"><span class="unit">$</span></div>
+            <div class="affix"><label class="sr-only" for="p-max">السعر إلى</label><input class="input num" id="p-max" inputmode="numeric" value="200,000"><span class="unit">$</span></div>
+          </div>
+          <p class="help" style="margin-top:6px">الفلترة بالدولار دائماً لتفادي تقلّب الصرف.</p>
+        </fieldset>
+
+        <fieldset class="f-group">
+          <legend>سنة الصنع</legend>
+          <div class="range">
+            <label class="sr-only" for="y-min">من سنة</label>
+            <select class="select" id="y-min" data-fill="years"><option value="">من</option><option>2026</option><option>2025</option><option>2024</option><option>2023</option><option>2022</option><option>2021</option><option>2020</option><option>2019</option><option>2018</option><option>2017</option><option>2016</option><option>2015</option><option>2014</option><option>2013</option><option>2012</option><option>2011</option><option>2010</option><option>2009</option><option>2008</option><option>2007</option><option>2006</option><option>2005</option><option>2004</option><option>2003</option><option>2002</option><option>2001</option><option>2000</option><option>1999</option><option>1998</option><option>1997</option><option>1996</option><option>1995</option><option>1994</option><option>1993</option><option>1992</option><option>1991</option><option>1990</option></select>
+            <label class="sr-only" for="y-max">إلى سنة</label>
+            <select class="select" id="y-max" data-fill="years"><option value="">إلى</option><option>2026</option><option>2025</option><option>2024</option><option>2023</option><option>2022</option><option>2021</option><option>2020</option><option>2019</option><option>2018</option><option>2017</option><option>2016</option><option>2015</option><option>2014</option><option>2013</option><option>2012</option><option>2011</option><option>2010</option><option>2009</option><option>2008</option><option>2007</option><option>2006</option><option>2005</option><option>2004</option><option>2003</option><option>2002</option><option>2001</option><option>2000</option><option>1999</option><option>1998</option><option>1997</option><option>1996</option><option>1995</option><option>1994</option><option>1993</option><option>1992</option><option>1991</option><option>1990</option></select>
+          </div>
+        </fieldset>
+
+        <details class="f-group" open>
+          <summary>الحالة<svg class="i i-sm"><use href="icons.svg#chev-down"/></svg></summary>
+          <div class="f-inner checks">
+            <label class="check"><input type="checkbox" checked>مستعملة<small class="num">1,102</small></label>
+            <label class="check"><input type="checkbox">جديدة<small class="num">64</small></label>
+            <label class="check"><input type="checkbox">بحاجة إصلاح<small class="num">81</small></label>
+            <label class="check"><input type="checkbox">حادث<small class="num">37</small></label>
+          </div>
+        </details>
+
+        <details class="f-group" open>
+          <summary>سلامة الهيكل<svg class="i i-sm"><use href="icons.svg#chev-down"/></svg></summary>
+          <div class="f-inner checks">
+            <label class="check"><input type="checkbox">كاملة، خالية من الحوادث<small class="num">942</small></label>
+            <label class="check"><input type="checkbox">قصة<small class="num">156</small></label>
+          </div>
+        </details>
+
+        <details class="f-group" open>
+          <summary>نوع الوقود<svg class="i i-sm"><use href="icons.svg#chev-down"/></svg></summary>
+          <div class="f-inner chips">
+            <label class="chip"><input type="checkbox"><span>بنزين</span></label>
+            <label class="chip"><input type="checkbox"><span>مازوت</span></label>
+            <label class="chip"><input type="checkbox"><span>غاز</span></label>
+            <label class="chip"><input type="checkbox"><span>هجين</span></label>
+            <label class="chip"><input type="checkbox"><span>كهرباء</span></label>
+          </div>
+        </details>
+
+        <details class="f-group">
+          <summary>ناقل الحركة<svg class="i i-sm"><use href="icons.svg#chev-down"/></svg></summary>
+          <div class="f-inner chips">
+            <label class="chip"><input type="radio" name="tr" checked><span>الكل</span></label>
+            <label class="chip"><input type="radio" name="tr"><span>عادي</span></label>
+            <label class="chip"><input type="radio" name="tr"><span>أوتوماتيك</span></label>
+          </div>
+        </details>
+
+        <details class="f-group">
+          <summary>وضع الترقيم<svg class="i i-sm"><use href="icons.svg#chev-down"/></svg></summary>
+          <div class="f-inner checks">
+            <label class="check"><input type="checkbox">مرقمة سورية</label>
+            <label class="check"><input type="checkbox">رقم مؤقت</label>
+            <label class="check"><input type="checkbox">ترانزيت</label>
+            <label class="check"><input type="checkbox">غير مرقمة</label>
+          </div>
+        </details>
+
+        <details class="f-group">
+          <summary>الأوراق<svg class="i i-sm"><use href="icons.svg#chev-down"/></svg></summary>
+          <div class="f-inner checks">
+            <label class="check"><input type="checkbox">أوراق كاملة</label>
+            <label class="check"><input type="checkbox">أوراق ناقصة</label>
+            <label class="check"><input type="checkbox">بدون أوراق</label>
+          </div>
+        </details>
+
+        <details class="f-group">
+          <summary>الجمارك<svg class="i i-sm"><use href="icons.svg#chev-down"/></svg></summary>
+          <div class="f-inner checks">
+            <label class="check"><input type="checkbox">مفرزة</label>
+            <label class="check"><input type="checkbox">غير مفرزة</label>
+            <label class="check"><input type="checkbox">دخول مؤقت</label>
+            <label class="check"><input type="checkbox">مستوردة حديثاً</label>
+          </div>
+        </details>
+
+        <div class="f-group">
+          <label class="check"><input type="checkbox">من معارض موثّقة فقط</label>
+        </div>
+      </form>
+
+      <div class="f-foot show-sm">
+        <button class="btn btn-ghost" type="button">مسح</button>
+        <button class="btn btn-primary" type="button" data-close-filters>عرض <span class="num">1,284</span> نتيجة</button>
+      </div>
+    </aside>
+
+    <!-- النتائج -->
+    <section aria-labelledby="results-h">
+      <div class="toolbar">
+        <div>
+          <h1 id="results-h" tabindex="-1">سيارات للبيع في دمشق</h1>
+          <p class="count"><span class="num">1,284</span> إعلان</p>
+        </div>
+        <div class="tool-actions">
+          <button class="btn btn-ghost filter-btn" type="button" data-open-filters aria-controls="filters">
+            <svg class="i"><use href="icons.svg#filters"/></svg>فلترة<span class="n">3</span>
+          </button>
+          <label class="sr-only" for="sort">ترتيب النتائج</label>
+          <select class="select" id="sort">
+            <option>الأحدث</option><option>الأرخص</option><option>الأغلى</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="tags" aria-label="الفلاتر المفعّلة" style="margin-bottom:16px">
+        <span class="tag">سيارات <button type="button" aria-label="إزالة فلتر سيارات"><svg class="i i-sm"><use href="icons.svg#x"/></svg></button></span>
+        <span class="tag">دمشق <button type="button" aria-label="إزالة فلتر دمشق"><svg class="i i-sm"><use href="icons.svg#x"/></svg></button></span>
+        <span class="tag">حتى $200,000 <button type="button" aria-label="إزالة فلتر السعر"><svg class="i i-sm"><use href="icons.svg#x"/></svg></button></span>
+      </div>
+
+      <!-- حالة: نتائج -->
+      <div data-state="results">
+        <div class="results">
+          <article class="lcard">
+            <div class="media">
+              <div class="ph t2"><svg viewBox="0 0 200 100" aria-hidden="true"><use href="icons.svg#v-sedan"/></svg></div>
+              <div class="badges"><span class="badge badge-feat"><svg class="i"><use href="icons.svg#star"/></svg>مميز</span></div>
+              <button class="fav" type="button" aria-pressed="false" aria-label="أضف إلى المفضلة"><svg class="i"><use href="icons.svg#heart"/></svg></button>
+            </div>
+            <div class="body">
+              <h3><a href="listing.html?v=20260915c">كيا سيراتو 2014 فل كامل، فحص نظيف</a></h3>
+              <p class="price"><span class="p-usd"><bdi>$9,300</bdi></span><span class="p-syp">120.9 مليون ل.س</span></p>
+              <p class="meta"><span>2014</span><span>132,000 كم</span><span>أوتوماتيك</span></p>
+              <p class="loc"><svg class="i"><use href="icons.svg#pin"/></svg>دمشق، كفرسوسة · منذ 6 ساعات</p>
+            </div>
+          </article>
+          <article class="lcard">
+            <div class="media">
+              <div class="ph t5"><svg viewBox="0 0 200 100" aria-hidden="true"><use href="icons.svg#v-sedan"/></svg></div>
+              <button class="fav" type="button" aria-pressed="true" aria-label="إزالة من المفضلة"><svg class="i"><use href="icons.svg#heart"/></svg></button>
+            </div>
+            <div class="body">
+              <h3><a href="listing.html?v=20260915c">كيا ريو 2012، مركّب عليها جهاز غاز</a></h3>
+              <p class="price"><span class="p-usd"><bdi>$6,500</bdi></span><span class="p-syp">84.5 مليون ل.س</span></p>
+              <p class="meta"><span>2012</span><span>185,000 كم</span><span>عادي</span></p>
+              <p class="loc"><svg class="i"><use href="icons.svg#pin"/></svg>دمشق، المزة · منذ 20 دقيقة</p>
+            </div>
+          </article>
+          <article class="lcard">
+            <div class="media">
+              <div class="ph t1"><svg viewBox="0 0 200 100" aria-hidden="true"><use href="icons.svg#v-sedan"/></svg></div>
+              <button class="fav" type="button" aria-pressed="false" aria-label="أضف إلى المفضلة"><svg class="i"><use href="icons.svg#heart"/></svg></button>
+            </div>
+            <div class="body">
+              <h3><a href="listing.html?v=20260915c">هيونداي أفانتي 2011 أوتوماتيك</a></h3>
+              <p class="price"><span class="p-usd"><bdi>$7,200</bdi></span><span class="p-syp">93.6 مليون ل.س</span></p>
+              <p class="meta"><span>2011</span><span>160,000 كم</span><span>أوتوماتيك</span></p>
+              <p class="loc"><svg class="i"><use href="icons.svg#pin"/></svg>دمشق، الميدان · منذ ساعة</p>
+            </div>
+          </article>
+          <article class="lcard">
+            <div class="media">
+              <div class="ph t4"><svg viewBox="0 0 200 100" aria-hidden="true"><use href="icons.svg#v-sedan"/></svg></div>
+              <button class="fav" type="button" aria-pressed="false" aria-label="أضف إلى المفضلة"><svg class="i"><use href="icons.svg#heart"/></svg></button>
+            </div>
+            <div class="body">
+              <h3><a href="listing.html?v=20260915c">شيري تيغو 2013 دفع رباعي</a></h3>
+              <p class="price"><span class="p-usd"><bdi>$6,900</bdi></span><span class="p-syp">89.7 مليون ل.س</span></p>
+              <p class="meta"><span>2013</span><span>150,000 كم</span><span>عادي</span></p>
+              <p class="loc"><svg class="i"><use href="icons.svg#pin"/></svg>دمشق، برزة · منذ 3 ساعات</p>
+            </div>
+          </article>
+          <article class="lcard">
+            <div class="media">
+              <div class="ph t3"><svg viewBox="0 0 200 100" aria-hidden="true"><use href="icons.svg#v-sedan"/></svg></div>
+              <button class="fav" type="button" aria-pressed="false" aria-label="أضف إلى المفضلة"><svg class="i"><use href="icons.svg#heart"/></svg></button>
+            </div>
+            <div class="body">
+              <h3><a href="listing.html?v=20260915c">ميتسوبيشي لانسر 2009، مفرزة</a></h3>
+              <p class="price"><span class="p-usd"><bdi>$5,500</bdi></span><span class="p-syp">71.5 مليون ل.س</span></p>
+              <p class="meta"><span>2009</span><span>220,000 كم</span><span>عادي</span></p>
+              <p class="loc"><svg class="i"><use href="icons.svg#pin"/></svg>دمشق، ركن الدين · أمس</p>
+            </div>
+          </article>
+          <article class="lcard">
+            <div class="media">
+              <div class="ph t6"><svg viewBox="0 0 200 100" aria-hidden="true"><use href="icons.svg#v-sedan"/></svg></div>
+              <button class="fav" type="button" aria-pressed="false" aria-label="أضف إلى المفضلة"><svg class="i"><use href="icons.svg#heart"/></svg></button>
+            </div>
+            <div class="body">
+              <h3><a href="listing.html?v=20260915c">بيجو 206 موديل 2007، بحاجة دهان</a></h3>
+              <p class="price"><span class="p-usd"><bdi>$3,900</bdi></span><span class="p-syp">50.7 مليون ل.س</span></p>
+              <p class="meta"><span>2007</span><span>198,000 كم</span><span>عادي</span></p>
+              <p class="loc"><svg class="i"><use href="icons.svg#pin"/></svg>دمشق، القصاع · أمس</p>
+            </div>
+          </article>
+        </div>
+
+        <nav class="pager" aria-label="الصفحات">
+          <a href="#" aria-label="الصفحة السابقة"><svg class="i i-sm"><use href="icons.svg#chev-right"/></svg></a>
+          <a href="#" aria-current="page">1</a><a href="#">2</a><a href="#">3</a><span>…</span><a href="#">214</a>
+          <a href="#" aria-label="الصفحة التالية"><svg class="i i-sm"><use href="icons.svg#chev-left"/></svg></a>
+        </nav>
+      </div>
+
+      <!-- حالة: تحميل -->
+      <div data-state="loading" hidden aria-busy="true" aria-label="جارٍ تحميل النتائج">
+        <div class="results">
+          <div class="sk-card"><div class="sk sk-img"></div><div class="sk-body"><div class="sk sk-line" style="width:40%;height:16px"></div><div class="sk sk-line" style="width:85%"></div><div class="sk sk-line" style="width:60%"></div></div></div>
+          <div class="sk-card"><div class="sk sk-img"></div><div class="sk-body"><div class="sk sk-line" style="width:40%;height:16px"></div><div class="sk sk-line" style="width:85%"></div><div class="sk sk-line" style="width:60%"></div></div></div>
+          <div class="sk-card"><div class="sk sk-img"></div><div class="sk-body"><div class="sk sk-line" style="width:40%;height:16px"></div><div class="sk sk-line" style="width:85%"></div><div class="sk sk-line" style="width:60%"></div></div></div>
+        </div>
+      </div>
+
+      <!-- حالة: لا نتائج -->
+      <div data-state="empty" hidden>
+        <div class="empty">
+          <div class="ic"><svg class="i i-lg"><use href="icons.svg#search"/></svg></div>
+          <h2>لا توجد إعلانات تطابق بحثك</h2>
+          <p>جرّب توسيع نطاق السعر أو إزالة بعض الفلاتر. يمكنك أيضاً حفظ البحث ليصلك تنبيه عند نشر إعلان مطابق.</p>
+          <div class="row">
+            <button class="btn btn-primary" type="button">إزالة كل الفلاتر</button>
+            <button class="btn btn-ghost" type="button">احفظ هذا البحث</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="demo-states" aria-label="معاينة حالات الصفحة">
+        معاينة الحالات:
+        <a href="search.html?v=20260915c">النتائج</a><a href="search.html?state=loading">التحميل</a><a href="search.html?state=empty">لا نتائج</a>
+      </div>
+    </section>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="f-bottom" style="margin-top:0;border-top:0;padding-top:0"><span>© 2026 سيّار</span><span>سعر الصرف: <span class="num">13,000</span> ل.س للدولار · آخر تحديث 14 أيلول</span></div>
+  </div>
+</footer>
+
+<nav class="tabbar" aria-label="التنقل السريع">
+  <a href="index.html?v=20260915c"><svg class="i"><use href="icons.svg#home"/></svg><span>الرئيسية</span></a>
+  <a href="search.html?v=20260915c" aria-current="page"><svg class="i"><use href="icons.svg#search"/></svg><span>بحث</span></a>
+  <a href="post.html?v=20260915c" class="tab-add"><span class="dot"><svg class="i"><use href="icons.svg#plus"/></svg></span><span>أضف إعلان</span></a>
+  <a href="account.html?v=20260915c#favorites"><svg class="i"><use href="icons.svg#heart"/></svg><span>المفضلة</span></a>
+  <a href="account.html?v=20260915c"><svg class="i"><use href="icons.svg#user"/></svg><span>حسابي</span></a>
+</nav>
+
+<script src="data.js?v=20260915c" defer></script>
+<script src="app.js?v=20260915c" defer></script>
+</body>
+</html>

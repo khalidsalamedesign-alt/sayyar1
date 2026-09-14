@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="ar" dir="rtl" data-cur="usd">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>الدخول وإنشاء حساب — سيّار</title>
+<meta name="theme-color" content="#17213D">
+<link rel="icon" href="../brand/sayyar-app-icon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600&family=Manrope:wght@600;800&family=Noto+Kufi+Arabic:wght@700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css?v=20260915c">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container hdr">
+    <a href="index.html?v=20260915c" class="logo" aria-label="سيّار — الرئيسية">
+      <span class="logo-word" aria-hidden="true">سيّار</span>
+      <svg class="logo-mark" aria-hidden="true"><use href="icons.svg#mark"/></svg>
+    </a>
+    <div class="hdr-actions">
+      <a class="btn btn-text" href="index.html?v=20260915c">العودة للموقع</a>
+    </div>
+  </div>
+</header>
+
+<main class="container">
+  <div class="auth">
+    <div class="panel">
+      <div class="seg" role="tablist" aria-label="الدخول أو إنشاء حساب" data-tabs data-hash>
+        <button type="button" role="tab" id="t-login" aria-controls="login" aria-selected="true">تسجيل الدخول</button>
+        <button type="button" role="tab" id="t-register" aria-controls="register" aria-selected="false">حساب جديد</button>
+      </div>
+
+      <!-- الدخول -->
+      <form id="login" role="tabpanel" aria-labelledby="t-login" class="stack" novalidate data-toast-submit="أهلاً بعودتك! (نموذج تجريبي)">
+        <div>
+          <h1 style="font-size:22px">أهلاً بعودتك</h1>
+          <p class="sub">ادخل برقم موبايلك وكلمة المرور.</p>
+        </div>
+        <div class="field">
+          <label class="label" for="l-phone">رقم الموبايل</label>
+          <div class="affix"><input class="input num" id="l-phone" type="tel" inputmode="tel" autocomplete="tel-national" dir="ltr" placeholder="9XX XXX XXX"><span class="unit" dir="ltr">+963</span></div>
+        </div>
+        <div class="field">
+          <div class="row-between"><label class="label" for="l-pass">كلمة المرور</label><a class="link" href="#" data-toast-click="سنرسل لك رابط الاستعادة عبر واتساب">نسيت كلمة المرور؟</a></div>
+          <div class="pass">
+            <input class="input" id="l-pass" type="password" autocomplete="current-password">
+            <button type="button" data-toggle-pass aria-pressed="false" aria-label="إظهار كلمة المرور"><svg class="i"><use href="icons.svg#eye"/></svg></button>
+          </div>
+        </div>
+        <label class="check"><input type="checkbox" checked>تذكّرني على هذا الجهاز</label>
+        <button class="btn btn-primary btn-lg btn-block" type="submit">دخول</button>
+        <p class="help" style="text-align:center">ما عندك حساب؟ <a class="link" href="#register" data-goto-tab="register">أنشئ حساباً مجانياً</a></p>
+      </form>
+
+      <!-- التسجيل -->
+      <form id="register" role="tabpanel" aria-labelledby="t-register" class="stack" novalidate hidden data-toast-submit="تم إنشاء حسابك (نموذج تجريبي)">
+        <div>
+          <h1 style="font-size:22px">أنشئ حسابك مجاناً</h1>
+          <p class="sub">انشر حتى 3 إعلانات مجاناً كفرد، أو فعّل صفحة خاصة لمعرضك.</p>
+        </div>
+
+        <fieldset>
+          <legend>نوع الحساب</legend>
+          <div class="types two">
+            <label class="type"><input type="radio" name="acct" value="individual" checked><span><span class="ic"><svg class="i"><use href="icons.svg#user"/></svg></span>فرد<small>مجاني</small></span></label>
+            <label class="type"><input type="radio" name="acct" value="dealer"><span><span class="ic"><svg class="i"><use href="icons.svg#store"/></svg></span>معرض أو مكتب<small>باشتراك شهري</small></span></label>
+          </div>
+        </fieldset>
+
+        <div class="field">
+          <label class="label" for="r-name">الاسم الكامل <span class="req">*</span></label>
+          <input class="input" id="r-name" autocomplete="name">
+        </div>
+        <div class="field" data-show-if="acct=dealer" hidden>
+          <label class="label" for="r-biz">اسم المعرض <span class="req">*</span></label>
+          <input class="input" id="r-biz" autocomplete="organization" placeholder="مثلاً: معرض النور للسيارات">
+          <p class="help">بعد إنشاء الحساب تختار الباقة لتفعيل صفحة معرضك.</p>
+        </div>
+        <div class="field">
+          <label class="label" for="r-phone">رقم الموبايل <span class="req">*</span></label>
+          <div class="affix"><input class="input num" id="r-phone" type="tel" inputmode="tel" autocomplete="tel-national" dir="ltr" placeholder="9XX XXX XXX"><span class="unit" dir="ltr">+963</span></div>
+        </div>
+        <div class="field">
+          <label class="label" for="r-city">المحافظة <span class="req">*</span></label>
+          <select class="select" id="r-city"><option value="">اختر المحافظة</option><option>دمشق</option><option>ريف دمشق</option><option>حلب</option><option>حمص</option><option>حماة</option><option>اللاذقية</option><option>طرطوس</option><option>إدلب</option><option>درعا</option><option>السويداء</option><option>القنيطرة</option><option>دير الزور</option><option>الرقة</option><option>الحسكة</option></select>
+        </div>
+        <div class="field">
+          <label class="label" for="r-pass">كلمة المرور <span class="req">*</span></label>
+          <div class="pass">
+            <input class="input" id="r-pass" type="password" autocomplete="new-password" aria-describedby="r-pass-help">
+            <button type="button" data-toggle-pass aria-pressed="false" aria-label="إظهار كلمة المرور"><svg class="i"><use href="icons.svg#eye"/></svg></button>
+          </div>
+          <p class="help" id="r-pass-help">8 أحرف على الأقل.</p>
+        </div>
+
+        <div class="hp" aria-hidden="true"><label for="r-website">اترك هذا الحقل فارغاً</label><input id="r-website" tabindex="-1" autocomplete="off"></div>
+        <div class="field">
+          <label class="label" for="r-captcha">سؤال التحقق <span class="req">*</span></label>
+          <div class="captcha"><span class="q" aria-hidden="true">6 + 2 =</span><input class="input num" id="r-captcha" inputmode="numeric" aria-describedby="r-captcha-help"></div>
+          <p class="help" id="r-captcha-help">كم ناتج جمع ستة واثنين؟</p>
+        </div>
+
+        <div class="alert alert-info"><svg class="i"><use href="icons.svg#info"/></svg><span>التحقق من الرقم برسالة قصيرة سيُضاف قريباً.</span></div>
+        <label class="check"><input type="checkbox">أوافق على <a class="link" href="terms.html?v=20260915c">شروط الاستخدام</a></label>
+        <button class="btn btn-primary btn-lg btn-block" type="submit">إنشاء الحساب</button>
+      </form>
+    </div>
+  </div>
+</main>
+
+<nav class="tabbar" aria-label="التنقل السريع">
+  <a href="index.html?v=20260915c"><svg class="i"><use href="icons.svg#home"/></svg><span>الرئيسية</span></a>
+  <a href="search.html?v=20260915c"><svg class="i"><use href="icons.svg#search"/></svg><span>بحث</span></a>
+  <a href="post.html?v=20260915c" class="tab-add"><span class="dot"><svg class="i"><use href="icons.svg#plus"/></svg></span><span>أضف إعلان</span></a>
+  <a href="account.html?v=20260915c#favorites"><svg class="i"><use href="icons.svg#heart"/></svg><span>المفضلة</span></a>
+  <a href="auth.html?v=20260915c" aria-current="page"><svg class="i"><use href="icons.svg#user"/></svg><span>حسابي</span></a>
+</nav>
+
+<script src="app.js?v=20260915c" defer></script>
+</body>
+</html>

@@ -1,0 +1,333 @@
+<!doctype html>
+<html lang="ar" dir="rtl" data-cur="usd">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>لوحة الإدارة — سيّار</title>
+<meta name="theme-color" content="#17213D">
+<meta name="robots" content="noindex">
+<link rel="icon" href="../brand/sayyar-app-icon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600&family=Manrope:wght@600;800&family=Noto+Kufi+Arabic:wght@700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css?v=20260915c">
+</head>
+<body class="no-tabbar">
+<a class="skip" href="#main">تخطَّ إلى المحتوى</a>
+
+<header class="site-header">
+  <div class="container hdr">
+    <a href="index.html?v=20260915c" class="logo" aria-label="سيّار — الرئيسية">
+      <span class="logo-word" aria-hidden="true">سيّار</span>
+      <svg class="logo-mark" aria-hidden="true"><use href="icons.svg#mark"/></svg>
+    </a>
+    <span class="badge admin-tag"><svg class="i"><use href="icons.svg#lock"/></svg>لوحة الإدارة</span>
+    <div class="hdr-actions">
+      <span class="hide-sm sub">سامر · مشرف</span>
+      <a class="btn btn-text" href="index.html?v=20260915c"><svg class="i"><use href="icons.svg#logout"/></svg><span class="hide-sm">خروج</span></a>
+    </div>
+  </div>
+</header>
+
+<main id="main" class="container shell">
+  <aside class="side">
+    <div class="side-nav" role="tablist" aria-label="أقسام الإدارة" aria-orientation="vertical" data-tabs data-hash>
+      <button type="button" role="tab" id="t-a-ov" aria-controls="a-overview" aria-selected="true"><svg class="i"><use href="icons.svg#grid"/></svg>نظرة عامة</button>
+      <button type="button" role="tab" id="t-a-ap" aria-controls="a-approvals" aria-selected="false"><svg class="i"><use href="icons.svg#check"/></svg>الموافقات <span class="n num">12</span></button>
+      <button type="button" role="tab" id="t-a-us" aria-controls="a-users" aria-selected="false"><svg class="i"><use href="icons.svg#users"/></svg>المستخدمون والمعارض</button>
+      <button type="button" role="tab" id="t-a-su" aria-controls="a-subs" aria-selected="false"><svg class="i"><use href="icons.svg#wallet"/></svg>الاشتراكات والمدفوعات <span class="n num">3</span></button>
+      <button type="button" role="tab" id="t-a-ra" aria-controls="a-rate" aria-selected="false"><svg class="i"><use href="icons.svg#swap"/></svg>سعر الصرف</button>
+      <button type="button" role="tab" id="t-a-re" aria-controls="a-reports" aria-selected="false"><svg class="i"><use href="icons.svg#flag"/></svg>البلاغات <span class="n num">3</span></button>
+      <button type="button" role="tab" id="t-a-ca" aria-controls="a-cats" aria-selected="false"><svg class="i"><use href="icons.svg#layers"/></svg>الفئات</button>
+    </div>
+  </aside>
+
+  <div>
+    <!-- نظرة عامة -->
+    <section id="a-overview" role="tabpanel" aria-labelledby="t-a-ov" class="stack">
+      <div class="pane-head" style="margin-bottom:0"><div><h1>نظرة عامة</h1><p class="sub">الإثنين 14 أيلول 2026</p></div></div>
+      <div class="stats">
+        <div class="stat"><small><svg class="i"><use href="icons.svg#list"/></svg>إعلانات نشطة</small><b>12,555</b><p class="delta">+214 اليوم</p></div>
+        <div class="stat"><small><svg class="i"><use href="icons.svg#clock"/></svg>بانتظار المراجعة</small><b>12</b><p class="delta flat">أقدمها منذ 3 ساعات</p></div>
+        <div class="stat"><small><svg class="i"><use href="icons.svg#store"/></svg>معارض مشتركة</small><b>146</b><p class="delta">+6 هذا الشهر</p></div>
+        <div class="stat"><small><svg class="i"><use href="icons.svg#flag"/></svg>بلاغات مفتوحة</small><b>3</b><p class="delta flat">—</p></div>
+      </div>
+
+      <div class="panel stack">
+        <h2 style="font-size:18px">تحتاج انتباهك</h2>
+        <div class="alert alert-warn"><svg class="i"><use href="icons.svg#alert"/></svg><span><b>4 اشتراكات تنتهي خلال 5 أيام.</b> تواصل مع المعارض قبل إخفاء إعلاناتها.</span><a class="btn btn-ghost" href="#a-expiring" data-goto-tab="a-overview">عرض</a></div>
+        <div class="alert alert-info"><svg class="i"><use href="icons.svg#wallet"/></svg><span><b>3 طلبات دفع</b> بانتظار التأكيد والتفعيل.</span><a class="btn btn-ghost" href="#a-subs" data-goto-tab="a-subs">مراجعة</a></div>
+        <div class="alert alert-warn"><svg class="i"><use href="icons.svg#swap"/></svg><span><b>سعر الصرف لم يُحدَّث منذ 26 ساعة.</b></span><a class="btn btn-ghost" href="#a-rate" data-goto-tab="a-rate">تحديث</a></div>
+      </div>
+
+      <div id="a-expiring">
+        <div class="panel-head"><h2>اشتراكات تنتهي قريباً</h2></div>
+        <div class="table-wrap">
+          <table class="tbl">
+            <thead><tr><th>المعرض</th><th>الباقة</th><th>ينتهي</th><th>الإعلانات</th><th><span class="sr-only">إجراءات</span></th></tr></thead>
+            <tbody>
+              <tr><td><div class="who"><span class="avatar">ن</span><span>معرض النور للسيارات<small>دمشق</small></span></div></td><td>بريميوم</td><td><span class="badge badge-warn">بعد 4 أيام</span></td><td class="n">38</td><td><div class="row-acts"><a class="btn btn-text" href="https://wa.me/963900000000">واتساب</a><button class="btn btn-ghost" type="button" data-toast-click="مُدِّد الاشتراك شهراً">تمديد</button></div></td></tr>
+              <tr><td><div class="who"><span class="avatar" style="background:#2E3B5E">ع</span><span>معرض العاصي<small>حمص</small></span></div></td><td>أساسية</td><td><span class="badge badge-warn">بعد يومين</span></td><td class="n">21</td><td><div class="row-acts"><a class="btn btn-text" href="https://wa.me/963900000000">واتساب</a><button class="btn btn-ghost" type="button" data-toast-click="مُدِّد الاشتراك شهراً">تمديد</button></div></td></tr>
+              <tr><td><div class="who"><span class="avatar" style="background:#3A4254">و</span><span>معرض الوادي<small>حماة</small></span></div></td><td>بريميوم</td><td><span class="badge badge-danger">غداً</span></td><td class="n">25</td><td><div class="row-acts"><a class="btn btn-text" href="https://wa.me/963900000000">واتساب</a><button class="btn btn-ghost" type="button" data-toast-click="مُدِّد الاشتراك شهراً">تمديد</button></div></td></tr>
+              <tr><td><div class="who"><span class="avatar" style="background:#24324F">ج</span><span>معرض الجنوب<small>درعا</small></span></div></td><td>أساسية</td><td><span class="badge badge-warn">بعد 5 أيام</span></td><td class="n">14</td><td><div class="row-acts"><a class="btn btn-text" href="https://wa.me/963900000000">واتساب</a><button class="btn btn-ghost" type="button" data-toast-click="مُدِّد الاشتراك شهراً">تمديد</button></div></td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- الموافقات -->
+    <section id="a-approvals" role="tabpanel" aria-labelledby="t-a-ap" hidden>
+      <div class="pane-head"><div><h1>الموافقة على الإعلانات</h1><p class="sub">الأقدم أولاً · <span class="num">12</span> بانتظار المراجعة</p></div></div>
+      <div class="queue" id="queue">
+        <article class="qcard" data-row>
+          <div class="ph t4"><svg viewBox="0 0 200 100" aria-hidden="true"><use href="icons.svg#v-van"/></svg></div>
+          <div>
+            <h3>هيونداي H100 فان ركاب 2010</h3>
+            <p class="price" style="flex-direction:row;gap:8px;align-items:baseline"><span class="p-usd"><bdi>$8,700</bdi></span><span class="p-syp">113.1 مليون ل.س</span></p>
+            <p class="kvline"><span><svg class="i"><use href="icons.svg#user"/></svg>أحمد خليل (فرد)</span><span><svg class="i"><use href="icons.svg#pin"/></svg>حماة</span><span><svg class="i"><use href="icons.svg#clock"/></svg>منذ 3 ساعات</span><span><svg class="i"><use href="icons.svg#image"/></svg><span class="num">6</span> صور</span></p>
+            <div class="flags"><span class="badge badge-warn"><svg class="i"><use href="icons.svg#alert"/></svg>مشابه لإعلان سابق لنفس المستخدم</span></div>
+          </div>
+          <div class="acts">
+            <button class="btn btn-primary" type="button" data-resolve data-toast="قُبل الإعلان ونُشر"><svg class="i"><use href="icons.svg#check"/></svg>قبول</button>
+            <button class="btn btn-ghost" type="button" data-dialog="reject"><svg class="i"><use href="icons.svg#x"/></svg>رفض</button>
+            <a class="btn btn-text" href="listing.html?v=20260915c">التفاصيل</a>
+          </div>
+        </article>
+        <article class="qcard" data-row>
+          <div class="ph t2"><svg viewBox="0 0 200 100" aria-hidden="true"><use href="icons.svg#v-sedan"/></svg></div>
+          <div>
+            <h3>كيا سبورتاج 2016 فل كامل</h3>
+            <p class="price" style="flex-direction:row;gap:8px;align-items:baseline"><span class="p-usd"><bdi>$1,500</bdi></span><span class="p-syp">19.5 مليون ل.س</span></p>
+            <p class="kvline"><span><svg class="i"><use href="icons.svg#user"/></svg>حساب جديد (فرد)</span><span><svg class="i"><use href="icons.svg#pin"/></svg>دمشق</span><span><svg class="i"><use href="icons.svg#clock"/></svg>منذ ساعتين</span><span><svg class="i"><use href="icons.svg#image"/></svg><span class="num">2</span> صور</span></p>
+            <div class="flags"><span class="badge badge-danger"><svg class="i"><use href="icons.svg#alert"/></svg>سعر أقل بكثير من المعتاد</span><span class="badge badge-warn"><svg class="i"><use href="icons.svg#phone"/></svg>رقم هاتف داخل الوصف</span></div>
+          </div>
+          <div class="acts">
+            <button class="btn btn-primary" type="button" data-resolve data-toast="قُبل الإعلان ونُشر"><svg class="i"><use href="icons.svg#check"/></svg>قبول</button>
+            <button class="btn btn-ghost" type="button" data-dialog="reject"><svg class="i"><use href="icons.svg#x"/></svg>رفض</button>
+            <a class="btn btn-text" href="listing.html?v=20260915c">التفاصيل</a>
+          </div>
+        </article>
+        <article class="qcard" data-row>
+          <div class="ph t6"><svg viewBox="0 0 200 100" aria-hidden="true"><use href="icons.svg#v-moto"/></svg></div>
+          <div>
+            <h3>هوندا ويف 110 موديل 2021</h3>
+            <p class="price" style="flex-direction:row;gap:8px;align-items:baseline"><span class="p-usd"><bdi>$1,100</bdi></span><span class="p-syp">14.3 مليون ل.س</span></p>
+            <p class="kvline"><span><svg class="i"><use href="icons.svg#store"/></svg>الساحل لتجارة الآليات (معرض موثّق)</span><span><svg class="i"><use href="icons.svg#pin"/></svg>اللاذقية</span><span><svg class="i"><use href="icons.svg#clock"/></svg>منذ 40 دقيقة</span><span><svg class="i"><use href="icons.svg#image"/></svg><span class="num">9</span> صور</span></p>
+          </div>
+          <div class="acts">
+            <button class="btn btn-primary" type="button" data-resolve data-toast="قُبل الإعلان ونُشر"><svg class="i"><use href="icons.svg#check"/></svg>قبول</button>
+            <button class="btn btn-ghost" type="button" data-dialog="reject"><svg class="i"><use href="icons.svg#x"/></svg>رفض</button>
+            <a class="btn btn-text" href="listing.html?v=20260915c">التفاصيل</a>
+          </div>
+        </article>
+      </div>
+      <div class="empty" data-empty="queue" hidden>
+        <div class="ic" style="background:var(--ok-tint);color:var(--ok)"><svg class="i i-lg"><use href="icons.svg#check"/></svg></div>
+        <h2>لا يوجد إعلانات بانتظار المراجعة</h2>
+        <p>أنجزت كل شيء. ستظهر الإعلانات الجديدة هنا فور إرسالها.</p>
+      </div>
+    </section>
+
+    <!-- المستخدمون والمعارض -->
+    <section id="a-users" role="tabpanel" aria-labelledby="t-a-us" hidden>
+      <div class="pane-head"><h1>المستخدمون والمعارض</h1></div>
+      <div class="filter-row">
+        <div class="ctl"><label class="sr-only" for="u-q">ابحث بالاسم أو الرقم</label><svg class="i" aria-hidden="true"><use href="icons.svg#search"/></svg><input class="input" id="u-q" type="search" placeholder="ابحث بالاسم أو رقم الموبايل"></div>
+        <div class="chips" role="radiogroup" aria-label="نوع الحساب" data-filter="#u-rows">
+          <label class="chip"><input type="radio" name="ut" value="all" checked><span>الكل</span></label>
+          <label class="chip"><input type="radio" name="ut" value="individual"><span>أفراد</span></label>
+          <label class="chip"><input type="radio" name="ut" value="dealer"><span>معارض</span></label>
+        </div>
+      </div>
+      <div class="table-wrap">
+        <table class="tbl">
+          <thead><tr><th>الحساب</th><th>النوع</th><th>الإعلانات</th><th>الاشتراك</th><th>موثّق</th><th><span class="sr-only">إجراءات</span></th></tr></thead>
+          <tbody id="u-rows">
+            <tr data-status="dealer"><td><div class="who"><span class="avatar">ن</span><span>معرض النور للسيارات<small class="num">0933 000 000 · دمشق</small></span></div></td><td>معرض</td><td class="n">38</td><td><span class="st st-active">بريميوم · نشط</span></td><td><button class="switch" role="switch" aria-checked="true" aria-label="توثيق معرض النور" data-on="وُثّق المعرض" data-off="أُزيلت شارة التوثيق"></button></td><td><div class="row-acts"><button class="btn btn-text" type="button" data-toast-click="أُوقف الحساب مؤقتاً">إيقاف</button></div></td></tr>
+            <tr data-status="dealer"><td><div class="who"><span class="avatar" style="background:#3A4254">أ</span><span>مكتب الأمانة للسيارات<small class="num">0944 000 000 · ريف دمشق</small></span></div></td><td>معرض</td><td class="n">17</td><td><span class="st st-active">أساسية · نشط</span></td><td><button class="switch" role="switch" aria-checked="false" aria-label="توثيق مكتب الأمانة" data-on="وُثّق المعرض" data-off="أُزيلت شارة التوثيق"></button></td><td><div class="row-acts"><button class="btn btn-text" type="button" data-toast-click="أُوقف الحساب مؤقتاً">إيقاف</button></div></td></tr>
+            <tr data-status="dealer"><td><div class="who"><span class="avatar" style="background:#2E3B5E">ب</span><span>معرض البادية<small class="num">0955 000 000 · حمص</small></span></div></td><td>معرض</td><td class="n">0</td><td><span class="st st-pending">بانتظار الدفع</span></td><td><button class="switch" role="switch" aria-checked="false" aria-label="توثيق معرض البادية" data-on="وُثّق المعرض" data-off="أُزيلت شارة التوثيق"></button></td><td><div class="row-acts"><button class="btn btn-ghost" type="button" data-toast-click="فُعّل الاشتراك يدوياً">تفعيل</button></div></td></tr>
+            <tr data-status="individual"><td><div class="who"><span class="avatar" style="background:#24324F">أ</span><span>أحمد خليل<small class="num">0933 111 222 · دمشق</small></span></div></td><td>فرد</td><td class="n">2 / 3</td><td>—</td><td>—</td><td><div class="row-acts"><button class="btn btn-text" type="button" data-toast-click="أُوقف الحساب مؤقتاً">إيقاف</button></div></td></tr>
+            <tr data-status="individual"><td><div class="who"><span class="avatar" style="background:#3A4254">ر</span><span>رامي حداد<small class="num">0988 222 333 · حلب</small></span></div></td><td>فرد</td><td class="n">1 / 3</td><td>—</td><td>—</td><td><div class="row-acts"><button class="btn btn-text" type="button" data-toast-click="أُوقف الحساب مؤقتاً">إيقاف</button></div></td></tr>
+            <tr data-status="individual"><td><div class="who"><span class="avatar" style="background:#B42318">؟</span><span>حساب جديد<small class="num">0999 999 999 · دمشق</small></span></div></td><td>فرد</td><td class="n">1 / 3</td><td>—</td><td><span class="badge badge-danger">بلاغان</span></td><td><div class="row-acts"><button class="btn btn-danger-text" type="button" data-toast-click="أُوقف الحساب وأُخفيت إعلاناته">إيقاف</button></div></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- الاشتراكات والمدفوعات -->
+    <section id="a-subs" role="tabpanel" aria-labelledby="t-a-su" hidden class="stack">
+      <div class="pane-head" style="margin-bottom:0"><h1>الاشتراكات والمدفوعات</h1></div>
+      <div>
+        <div class="panel-head"><h2>طلبات دفع بانتظار التأكيد</h2></div>
+        <div class="table-wrap">
+          <table class="tbl">
+            <thead><tr><th>المعرض</th><th>الباقة والمدة</th><th>المبلغ</th><th>الطريقة</th><th>رقم العملية</th><th>الإشعار</th><th><span class="sr-only">إجراءات</span></th></tr></thead>
+            <tbody id="pay-rows">
+              <tr data-row><td><div class="who"><span class="avatar" style="background:#2E3B5E">ب</span><span>معرض البادية<small>منذ ساعة</small></span></div></td><td>بريميوم · شهر</td><td class="n">$35</td><td>شام كاش</td><td class="n" dir="ltr">4839201</td><td><button class="receipt" type="button" aria-label="عرض صورة الإشعار" data-dialog="receipt"><svg class="i"><use href="icons.svg#file"/></svg></button></td><td><div class="row-acts"><button class="btn btn-primary" type="button" data-resolve data-toast="تأكد الدفع وفُعّل الاشتراك">تأكيد وتفعيل</button><button class="btn btn-text" type="button" data-resolve data-toast="رُفض الطلب وأُبلغ المعرض">رفض</button></div></td></tr>
+              <tr data-row><td><div class="who"><span class="avatar">ن</span><span>معرض النور للسيارات<small>منذ 3 ساعات</small></span></div></td><td>بريميوم · 3 أشهر</td><td class="n">$94.5</td><td>سيريتل كاش</td><td class="n" dir="ltr">77120934</td><td><button class="receipt" type="button" aria-label="عرض صورة الإشعار" data-dialog="receipt"><svg class="i"><use href="icons.svg#file"/></svg></button></td><td><div class="row-acts"><button class="btn btn-primary" type="button" data-resolve data-toast="تأكد الدفع وفُعّل الاشتراك">تأكيد وتفعيل</button><button class="btn btn-text" type="button" data-resolve data-toast="رُفض الطلب وأُبلغ المعرض">رفض</button></div></td></tr>
+              <tr data-row><td><div class="who"><span class="avatar" style="background:#24324F">ج</span><span>معرض الجنوب<small>أمس</small></span></div></td><td>أساسية · شهر</td><td class="n">$15</td><td>MTN كاش</td><td class="n" dir="ltr">5520017</td><td><button class="receipt" type="button" aria-label="عرض صورة الإشعار" data-dialog="receipt"><svg class="i"><use href="icons.svg#file"/></svg></button></td><td><div class="row-acts"><button class="btn btn-primary" type="button" data-resolve data-toast="تأكد الدفع وفُعّل الاشتراك">تأكيد وتفعيل</button><button class="btn btn-text" type="button" data-resolve data-toast="رُفض الطلب وأُبلغ المعرض">رفض</button></div></td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="empty" data-empty="pay-rows" hidden style="margin-top:12px"><h2>لا توجد طلبات دفع معلّقة</h2></div>
+      </div>
+
+      <form class="panel" novalidate data-toast-submit="سُجّلت الدفعة ومُدِّد الاشتراك">
+        <h2>تسجيل دفعة أو تمديد يدوي</h2>
+        <div class="form-grid" style="margin-top:4px">
+          <div class="field"><label class="label" for="m-dealer">المعرض</label><select class="select" id="m-dealer"><option>معرض النور للسيارات</option><option>معرض العاصي</option><option>معرض الوادي</option><option>معرض الجنوب</option></select></div>
+          <div class="field"><label class="label" for="m-plan">الباقة</label><select class="select" id="m-plan"><option>بريميوم</option><option>أساسية</option></select></div>
+          <div class="field"><label class="label" for="m-period">المدة</label><select class="select" id="m-period"><option>شهر</option><option>3 أشهر</option><option>6 أشهر</option></select></div>
+          <div class="field"><label class="label" for="m-amount">المبلغ</label><div class="affix"><input class="input num" id="m-amount" inputmode="decimal" value="35"><span class="unit">$</span></div></div>
+          <div class="field"><label class="label" for="m-method">طريقة الدفع</label><select class="select" id="m-method"><option>شام كاش</option><option>سيريتل كاش</option><option>MTN كاش</option><option>نقداً</option></select></div>
+          <div class="field"><label class="label" for="m-note">ملاحظات الأدمن</label><input class="input" id="m-note" placeholder="اختياري"></div>
+        </div>
+        <button class="btn btn-primary" type="submit" style="margin-top:18px">تسجيل الدفعة</button>
+      </form>
+    </section>
+
+    <!-- سعر الصرف -->
+    <section id="a-rate" role="tabpanel" aria-labelledby="t-a-ra" hidden>
+      <div class="pane-head"><div><h1>سعر الصرف</h1><p class="sub">يُستخدم لعرض الأسعار بالليرة. الفلترة تبقى بالدولار.</p></div></div>
+      <div class="rate-grid">
+        <div class="panel">
+          <p class="sub">السعر الحالي</p>
+          <p class="rate-now"><span id="rate-current">13,000</span> <small>ل.س للدولار</small></p>
+          <p class="help" id="rate-updated">آخر تحديث: 13 أيلول 2026، 8:30 ص — بواسطة سامر</p>
+          <form id="rate-form" class="stack" style="margin-top:18px" novalidate>
+            <div class="field">
+              <label class="label" for="rate-new">السعر الجديد</label>
+              <div class="affix"><input class="input num" id="rate-new" inputmode="numeric" placeholder="13,150" aria-describedby="rate-preview rate-err"><span class="unit">ل.س</span></div>
+              <p class="equiv" id="rate-preview"></p>
+              <p class="err" id="rate-err"><svg class="i i-sm"><use href="icons.svg#info"/></svg>أدخل سعراً صحيحاً (أكبر من 1,000).</p>
+            </div>
+            <button class="btn btn-primary" type="submit"><svg class="i"><use href="icons.svg#refresh"/></svg>تحديث السعر</button>
+          </form>
+          <div class="alert alert-info" style="margin-top:16px"><svg class="i"><use href="icons.svg#info"/></svg><span>يُحدَّث يدوياً حالياً، والبنية جاهزة لربطه بمصدر تلقائي لاحقاً.</span></div>
+        </div>
+        <div>
+          <div class="panel-head"><h2>سجل التحديثات</h2></div>
+          <div class="table-wrap">
+            <table class="tbl" style="min-width:0">
+              <thead><tr><th>التاريخ</th><th>السعر</th><th>بواسطة</th></tr></thead>
+              <tbody id="rate-history">
+                <tr><td class="n">13 أيلول، 8:30 ص</td><td class="n">13,000</td><td>سامر</td></tr>
+                <tr><td class="n">11 أيلول، 9:10 ص</td><td class="n">12,850</td><td>سامر</td></tr>
+                <tr><td class="n">8 أيلول، 10:00 ص</td><td class="n">12,900</td><td>لينا</td></tr>
+                <tr><td class="n">4 أيلول، 8:45 ص</td><td class="n">12,700</td><td>سامر</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- البلاغات -->
+    <section id="a-reports" role="tabpanel" aria-labelledby="t-a-re" hidden>
+      <div class="pane-head"><h1>البلاغات</h1></div>
+      <div class="queue" id="reports">
+        <article class="qcard" data-row>
+          <div class="ph t2"><svg viewBox="0 0 200 100" aria-hidden="true"><use href="icons.svg#v-sedan"/></svg></div>
+          <div>
+            <h3><a href="listing.html?v=20260915c">كيا سبورتاج 2016 فل كامل</a></h3>
+            <div class="flags"><span class="badge badge-danger">سعر وهمي</span><span class="badge">3 بلاغات</span></div>
+            <p class="kvline"><span>«طلب مني عربون قبل ما أشوف السيارة»</span></p>
+            <p class="kvline"><span><svg class="i"><use href="icons.svg#clock"/></svg>آخر بلاغ منذ ساعة</span></p>
+          </div>
+          <div class="acts">
+            <button class="btn btn-primary" type="button" data-resolve data-toast="أُخفي الإعلان وأُوقف الحساب" style="background:var(--danger)">إخفاء وإيقاف</button>
+            <button class="btn btn-ghost" type="button" data-resolve data-toast="أُخفي الإعلان">إخفاء الإعلان</button>
+            <button class="btn btn-text" type="button" data-resolve data-toast="أُغلق البلاغ">تجاهل</button>
+          </div>
+        </article>
+        <article class="qcard" data-row>
+          <div class="ph t5"><svg viewBox="0 0 200 100" aria-hidden="true"><use href="icons.svg#v-sedan"/></svg></div>
+          <div>
+            <h3><a href="listing.html?v=20260915c">هيونداي أفانتي 2011 أوتوماتيك</a></h3>
+            <div class="flags"><span class="badge badge-warn">آلية مباعة</span><span class="badge">بلاغ واحد</span></div>
+            <p class="kvline"><span>«اتصلت وقال انباعت من أسبوع»</span></p>
+            <p class="kvline"><span><svg class="i"><use href="icons.svg#clock"/></svg>منذ 5 ساعات</span></p>
+          </div>
+          <div class="acts">
+            <button class="btn btn-ghost" type="button" data-resolve data-toast="وُضع الإعلان كمباع وأُبلغ البائع">وضع كمباع</button>
+            <button class="btn btn-text" type="button" data-resolve data-toast="أُغلق البلاغ">تجاهل</button>
+          </div>
+        </article>
+        <article class="qcard" data-row>
+          <div class="ph t3"><svg viewBox="0 0 200 100" aria-hidden="true"><use href="icons.svg#v-pickup"/></svg></div>
+          <div>
+            <h3><a href="listing.html?v=20260915c">تويوتا هايلوكس 2008 دبل كابين</a></h3>
+            <div class="flags"><span class="badge badge-warn">إعلان مكرر</span><span class="badge">بلاغ واحد</span></div>
+            <p class="kvline"><span><svg class="i"><use href="icons.svg#clock"/></svg>أمس</span></p>
+          </div>
+          <div class="acts">
+            <button class="btn btn-ghost" type="button" data-resolve data-toast="حُذف الإعلان المكرر">حذف المكرر</button>
+            <button class="btn btn-text" type="button" data-resolve data-toast="أُغلق البلاغ">تجاهل</button>
+          </div>
+        </article>
+      </div>
+      <div class="empty" data-empty="reports" hidden>
+        <div class="ic" style="background:var(--ok-tint);color:var(--ok)"><svg class="i i-lg"><use href="icons.svg#check"/></svg></div>
+        <h2>لا توجد بلاغات مفتوحة</h2>
+      </div>
+    </section>
+
+    <!-- الفئات -->
+    <section id="a-cats" role="tabpanel" aria-labelledby="t-a-ca" hidden>
+      <div class="pane-head"><div><h1>الفئات</h1><p class="sub">تفعيل الفئة يُظهرها فوراً في الموقع ونموذج النشر.</p></div></div>
+      <div class="panel" style="padding-block:4px">
+        <ul class="tree">
+          <li class="parent"><span class="name"><svg class="i"><use href="icons.svg#car"/></svg>سيارات <small>· 8,412 إعلان</small></span><button class="switch" role="switch" aria-checked="true" aria-label="تفعيل فئة سيارات" data-on="فُعّلت الفئة" data-off="أُوقفت الفئة"></button></li>
+          <li class="child"><span class="name">سيدان</span><button class="switch" role="switch" aria-checked="true" aria-label="تفعيل سيدان" data-on="فُعّلت الفئة" data-off="أُوقفت الفئة"></button></li>
+          <li class="child"><span class="name">دفع رباعي</span><button class="switch" role="switch" aria-checked="true" aria-label="تفعيل دفع رباعي" data-on="فُعّلت الفئة" data-off="أُوقفت الفئة"></button></li>
+          <li class="child"><span class="name">هاتشباك</span><button class="switch" role="switch" aria-checked="true" aria-label="تفعيل هاتشباك" data-on="فُعّلت الفئة" data-off="أُوقفت الفئة"></button></li>
+          <li class="child"><span class="name">كوبيه</span><button class="switch" role="switch" aria-checked="true" aria-label="تفعيل كوبيه" data-on="فُعّلت الفئة" data-off="أُوقفت الفئة"></button></li>
+          <li class="parent"><span class="name"><svg class="i"><use href="icons.svg#van"/></svg>فانات ونقل خفيف <small>· 1,936 إعلان</small></span><button class="switch" role="switch" aria-checked="true" aria-label="تفعيل فانات ونقل خفيف" data-on="فُعّلت الفئة" data-off="أُوقفت الفئة"></button></li>
+          <li class="parent"><span class="name"><svg class="i"><use href="icons.svg#moto"/></svg>موتسكلات <small>· 2,207 إعلان</small></span><button class="switch" role="switch" aria-checked="true" aria-label="تفعيل موتسكلات" data-on="فُعّلت الفئة" data-off="أُوقفت الفئة"></button></li>
+          <li class="parent off"><span class="name"><svg class="i"><use href="icons.svg#truck"/></svg>شاحنات <small>· مرحلة لاحقة</small></span><button class="switch" role="switch" aria-checked="false" aria-label="تفعيل شاحنات" data-on="فُعّلت الفئة" data-off="أُوقفت الفئة"></button></li>
+          <li class="parent off"><span class="name"><svg class="i"><use href="icons.svg#digger"/></svg>معدات ثقيلة <small>· مرحلة لاحقة</small></span><button class="switch" role="switch" aria-checked="false" aria-label="تفعيل معدات ثقيلة" data-on="فُعّلت الفئة" data-off="أُوقفت الفئة"></button></li>
+          <li class="parent off"><span class="name"><svg class="i"><use href="icons.svg#tractor"/></svg>معدات زراعية <small>· مرحلة لاحقة</small></span><button class="switch" role="switch" aria-checked="false" aria-label="تفعيل معدات زراعية" data-on="فُعّلت الفئة" data-off="أُوقفت الفئة"></button></li>
+          <li class="parent off"><span class="name"><svg class="i"><use href="icons.svg#bolt"/></svg>مولدات وطاقة <small>· مرحلة لاحقة</small></span><button class="switch" role="switch" aria-checked="false" aria-label="تفعيل مولدات وطاقة" data-on="فُعّلت الفئة" data-off="أُوقفت الفئة"></button></li>
+        </ul>
+      </div>
+    </section>
+  </div>
+</main>
+
+<!-- رفض إعلان -->
+<dialog class="modal" id="reject" aria-labelledby="rej-h">
+  <div class="m-head"><h2 id="rej-h">رفض الإعلان</h2><button class="icon-btn" type="button" data-close-dialog aria-label="إغلاق" style="border:0"><svg class="i"><use href="icons.svg#x"/></svg></button></div>
+  <div class="m-body">
+    <p class="sub">سيظهر السبب للمستخدم ليعدّل إعلانه ويعيد إرساله.</p>
+    <div class="field" data-require-field>
+      <div class="radios" role="radiogroup" aria-label="سبب الرفض">
+        <label><input type="radio" name="rej">الصور غير واضحة أو لا تخص الآلية</label>
+        <label><input type="radio" name="rej">معلومات ناقصة أو غير صحيحة</label>
+        <label><input type="radio" name="rej">إعلان مكرر</label>
+        <label><input type="radio" name="rej">سعر غير منطقي</label>
+        <label><input type="radio" name="rej">مخالف لشروط الاستخدام</label>
+      </div>
+      <p class="err"><svg class="i i-sm"><use href="icons.svg#info"/></svg>اختر سبب الرفض.</p>
+    </div>
+    <div class="field">
+      <label class="label" for="rej-note">ملاحظة للمستخدم <span class="opt">(اختياري)</span></label>
+      <textarea class="textarea" id="rej-note" style="min-height:80px"></textarea>
+    </div>
+  </div>
+  <div class="m-foot"><button class="btn btn-text" type="button" data-close-dialog>إلغاء</button><button class="btn btn-primary" type="button" data-close-dialog data-require="input[name=rej]:checked" data-remove-pending data-toast="رُفض الإعلان وأُبلغ المستخدم بالسبب">رفض الإعلان</button></div>
+</dialog>
+
+<!-- صورة الإشعار -->
+<dialog class="modal" id="receipt" aria-labelledby="rc-h">
+  <div class="m-head"><h2 id="rc-h">إشعار التحويل</h2><button class="icon-btn" type="button" data-close-dialog aria-label="إغلاق" style="border:0"><svg class="i"><use href="icons.svg#x"/></svg></button></div>
+  <div class="m-body">
+    <div style="aspect-ratio:3/4;max-height:52vh;margin-inline:auto;display:grid;place-items:center;background:var(--gray);border-radius:var(--r);color:var(--muted)"><span style="display:grid;justify-items:center;gap:8px"><svg class="i i-lg"><use href="icons.svg#image"/></svg>صورة الإشعار المرفوعة</span></div>
+    <dl class="kv"><div><dt>المبلغ</dt><dd class="num">$35</dd></div><div><dt>رقم العملية</dt><dd class="num" dir="ltr">4839201</dd></div></dl>
+  </div>
+  <div class="m-foot"><button class="btn btn-primary" type="button" data-close-dialog>إغلاق</button></div>
+</dialog>
+
+<script src="app.js?v=20260915c" defer></script>
+</body>
+</html>
